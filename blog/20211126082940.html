@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- meta -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/images/logo.png">
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+
+<script type="text/javascript" src="/js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
+<link  type="text/css" rel="stylesheet" href="/js/google-code-prettify/prettify.css"/>
+<script>
+  $(function(){
+    // google code prettifyの有効化
+    $("pre").addClass("prettyprint");
+    function init(event){
+      prettyPrint();
+    }
+    if(window.addEventListener)window.addEventListener("load",init,false);
+    else if(window.attachEvent)window.attachEvent("onload",init);
+    
+    $(".to-top").click(function() {
+      // ページの一番上までスクロールさせます。
+      $('body, html').animate({scrollTop: 0}, 300, 'linear');;
+    });
+  });
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RZ64QNYV4Y');
+</script>
+<title>How to Execute git Command on Multiple Git Repositories - Perl開発者のGit入門</title>
+<meta name="description" content="I explain How to Execute git command on multiple git repositories.">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header_main">
+  <h1>
+    <a href="/"><img src="/images/logo.png">Perl開発者のGit入門</a>
+  </h1>
+  <div class="header_right">
+    <a rel="nofollow" href="https://perlclub.net/account/create">会員登録</a>
+  </div>
+</div>
+
+      </div>
+      <div class="main">
+        <div class="content">
+          <div class="entry">
+  <div class="top">
+    <!-- top -->
+
+  </div>
+  <div class="middle">
+    <h2><a href="/blog/20211126082940.html">How to Execute git Command on Multiple Git Repositories</a></h2>
+<p>
+  I explain How to Execute git command on multiple git repositories.
+</p>
+<div style="width:calc(100% - 30px);margin:10px auto;">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
+       crossorigin="anonymous"></script>
+  <!-- 最初の段落下 - ディスプレイ 横長 レスポンシブ -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-4525414114581084"
+       data-ad-slot="2828858335"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+
+<p>
+  You list directories using <a href="https://en.linux.perlzemi.com/blog/20191126082723.html">ls</a> command.
+</p>
+<pre>
+ls
+</pre>
+<p>
+  An example of the output:
+</p>
+<pre>
+bind            en_dbixcustom     en_webapp                   mojolicious
+c               en_deeplearning   en_webdesign                perlzemi
+centos          en_giblog         giblog                      philosophy
+datascience     en_git            giblog_docjp                staff
+dbixcustom      en_linux          giblog_new_blog_example     text
+deeplearning    en_mariadb        giblog_new_website_example  ubuntu
+devel           en_mojolicious    giblog_theme1               webapp
+en_bind         en_perlzemi       git                         webdesign
+en_c            en_philosophy     linux
+en_centos       en_siliconvalley  mariadb
+en_datascience  en_ubuntu         mojodoc
+</pre>
+<p>
+  You can select the list of the directories using <a href="https://en.linux.perlzemi.com/blog/20200602093211.html">grep</a> command.
+</p>
+<pre>
+ls | grep -P '^en_'
+</pre>
+<p>
+  An example of the output:
+</p>
+<pre>
+en_bind
+en_c
+en_centos
+en_datascience
+en_dbixcustom
+en_deeplearning
+en_giblog
+en_git
+en_linux
+en_mariadb
+en_mojolicious
+en_perlzemi
+en_philosophy
+en_siliconvalley
+en_ubuntu
+en_webapp
+en_webdesign
+</pre>
+<p>
+  You can make these directries the operand of the command option "git -C" using <a href="https://en.linux.perlzemi.com/blog/20200614103220.html">xargs</a> command.
+</p>
+<pre>
+# git status
+ls | grep -P '^en' | xargs -IFILE git -C FILE status
+
+# git reset --hard
+ls | grep -P '^en' | xargs -IFILE git -C FILE reset --hard
+
+# git diff
+ls | grep -P '^en' | xargs -IFILE git -C FILE --no-pager diff
+
+# git add
+ls | grep -P '^en' | xargs -IFILE git -C FILE add .
+
+# git commit
+ls | grep -P '^en' | xargs -IFILE git -C FILE commit -m "Add the links to English Pages"
+
+# git push
+ls | grep -P '^en' | xargs -IFILE git -C FILE push origin main
+</pre>
+
+  </div>
+  <div class="bottom">
+    <h3>関連情報</h3>
+
+<div style="margin:10px 0">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-4525414114581084"
+     data-ad-slot="9163995495"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+  </div>
+</div>
+
+        </div>
+        <div class="side">
+          <div style="margin-bottom:30px">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
+     crossorigin="anonymous"></script>
+<!-- ディスプレイ縦長 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4525414114581084"
+     data-ad-slot="4544919209"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<div style="margin-bottom:30px;padding:0 8px;">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-4525414114581084"
+     data-ad-slot="9163995495"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+        </div>
+      </div>
+      <div class="footer">
+        <div class="perlri_link">
+  <a rel="nofollow" href="https://perlclub.net/en">Perl Club</a>
+</div>
+
+      </div>
+    </div>
+  </body>
+</html>
