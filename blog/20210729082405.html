@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-RZ64QNYV4Y');
 </script>
-<title>コミットを行う - Git Tutorial</title>
-<meta name="description" content="Gitでコミットを行う方法を解説します。git commitコマンドで、コミットができます。コミットの準備ができている必要があります。">
+<title> Make a commit  - Git Tutorial</title>
+<meta name="description" content="I will explain how to commit with Git. You can commit with the  git commit command. You need to be  ready to commit.">
   </head>
   <body>
     <div class="container">
@@ -52,31 +50,30 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> Git </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/tutorial.html">
-        <span itemprop="name">入門</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Introduction </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210729082405.html">コミットを行う</a></h2>
+<h2><a href="/blog/20210729082405.html"> Make a commit </a></h2>
 <p>
-  Gitでコミットを行う方法を解説します。<a href="/blog/20201113141302.html">git commit</a>コマンドで、コミットができます。<a href="/blog/20210723090147.html">コミットの準備</a>ができている必要があります。
+  I will explain how to commit with Git. You can commit with the <a href="/blog/20201113141302.html"> git commit</a> command. You need to be <a href="/blog/20210723090147.html"> ready to commit</a>.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -95,74 +92,74 @@
 
 
 <p>
-  コミットを行うには、ソースコードの変更の要点を記述したコメントを入力する必要があります。「-m」オプションで指定します。このコメントは、コミットメッセージと呼ばれます。
+  To make a commit, you need to enter a comment that outlines the source code changes. Specify with the "-m" option. This comment is called a commit message.
 </p>
 <pre>
-# コメントを直接入力してコミット
-git commit -m "コメント"
+#Enter a comment directly to commit
+git commit -m "comment"
 </pre>
 <p>
-  「-m」オプションを使用しない場合は、viなどのエディタで、開くことができます。このエディタは、Gitの設定ファイルで設定することもできます。
+  If you do not use the "-m" option, you can open it in an editor such as vi. This editor can also be set in the Git config file.
 </p>
 <pre>
-# コメントをviなどのエディタで開いて記述してからコミットメッセージを書くこともできます。
+You can also open the #comment in an editor such as vi and write it before writing the commit message.
 git commit
 </pre>
-<h3>コミットの確認</h3>
+<h3> Confirm commit </h3>
 <p>
-  コミットを確認するには<a href="/blog/20201103093112.html">git logコマンド</a>を使います。
+  Use the <a href="/blog/20201103093112.html"> git log command</a> to confirm the commit.
 </p>
 <pre>
 git log
 </pre>
 <p>
-  git logの出力のサンプルです。一番上が新しいコミットです。今コミットしたコミットメッセージが、一番上にきていることを確認しましょう。
+  This is a sample output of git log. At the top is the new commit. Make sure the commit message you just committed is at the top.
 </p>
 <pre>
-commit 99e77ecbb2fa0922aed2995ebc20eea20b559a87 (HEAD -&gt; main, origin/main)
+commit 99e77ecbb2fa0922aed2995ebc20eea20b559a87 (HEAD-&gt;main, origin / main)
 Author: Yuki Kimoto &lt;kimoto.yuki@gmail.com&gt;
-Date:   Thu Jul 29 08:58:33 2021 +0900
+Date: Thu Jul 29 08:58:33 2021 +0900
 
-    ウィンドウのテキストを取得を追加
+    Added Get Window Text
 
 commit 8166b40288648dab314147df751c2d27788b1d03
 Author: Yuki Kimoto &lt;kimoto.yuki@gmail.com&gt;
-Date:   Wed Jul 28 08:53:01 2021 +0900
+Date: Wed Jul 28 08:53:01 2021 +0900
 
-    子ウィンドウの一覧を取得とデスクトップウィンドウの取得を追
+    Get list of child windows and get desktop window
 
 commit 7768973127fa0495e1ac8ab745d2f10fc1c38f8a
 Author: Yuki Kimoto &lt;kimoto.yuki@gmail.com&gt;
-Date:   Tue Jul 27 08:16:09 2021 +0900
+Date: Tue Jul 27 08:16:09 2021 +0900
 
-    PerlでWebブラウザ自動操作ロボット作成方法のまとめ加筆
+    Summary of how to create a web browser automated operation robot in Perl
 </pre>
 <p>
-  注意点として、これは、個人サイトのものなので、コミットメッセージがだいぶ適当ですが、共同開発の場合は、もう少し丁寧に書きましょう。
+  Note that this is from a personal site, so the commit message is pretty good, but if you're co-developing, write it a little more carefully.
 </p>
-<h3>間違ったコミットを戻すには?</h3>
+<h3> How to get back the wrong commit? </h3>
 <p>
-  間違ってコミットしたことに、コミット直後に気が付きました。こんな場合は、間違ったコミットを戻すには、どうすればよいのでしょうか?
+  Immediately after committing, I realized that I had committed by mistake. In this case, how can I get the wrong commit back?
 </p>
 <p>
-  「<a href="/blog/20210806133244.html">git reset</a>」コマンドを使って、以前のコミットまで戻します。一つ前のコミットIDを確認しましょう。上記の例では以下の「8166b40288648dab314147df751c2d27788b1d03」です。
+  Use the "<a href="/blog/20210806133244.html"> git reset</a>" command to revert to the previous commit. Check the previous commit ID. In the above example, it is the following "8166b40288648dab314147df751c2d27788b1d03".
 </p>
 <pre>
 commit 8166b40288648dab314147df751c2d27788b1d03
 Author: Yuki Kimoto &lt;kimoto.yuki@gmail.com&gt;
-Date:   Wed Jul 28 08:53:01 2021 +0900
+Date: Wed Jul 28 08:53:01 2021 +0900
 
-    子ウィンドウの一覧を取得とデスクトップウィンドウの取得を追
+    Get list of child windows and get desktop window
 </pre>
 <p>
-  このコミットIDを「git reset」の引数に指定します。
+  Specify this commit ID in the argument of "git reset".
 </p>
 <pre>
-# 一つ前のコミットに戻す
+# Revert to the previous commit
 git reset 8166b40288648dab314147df751c2d27788b1d03
 </pre>
 <p>
-  間違っても「git reset」コマンドに「--hard」オプションを指定しないようにしましょう。ワーキングディレクトリでのファイルの変更がすべて戻り、涙が出てきます。テキストエディタでファイルを開いていて、内容が残っている場合は、素早く上書きしましょう。
+  If you make a mistake, don't specify the "--hard" option in the "git reset" command. All the file changes in the working directory are returned and tears come out. If you have a file open in a text editor and the content remains, overwrite it quickly.
 </p>
 
   </div>
@@ -190,8 +187,7 @@ git reset 8166b40288648dab314147df751c2d27788b1d03
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

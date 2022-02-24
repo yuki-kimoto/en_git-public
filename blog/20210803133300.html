@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-RZ64QNYV4Y');
 </script>
-<title>リモートリポジトリにブランチをプッシュする - Git Tutorial</title>
-<meta name="description" content="リモートリポジトリにブランチをプッシュする方法を解説します。コミットが完了していることを前提とします。">
+<title> Push a branch to a remote repository  - Git Tutorial</title>
+<meta name="description" content="Learn how to push a branch to a remote repository. It is assumed that  commit is complete.">
   </head>
   <body>
     <div class="container">
@@ -52,31 +50,30 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> Git </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/tutorial.html">
-        <span itemprop="name">入門</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Introduction </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210803133300.html">リモートリポジトリにブランチをプッシュする</a></h2>
+<h2><a href="/blog/20210803133300.html"> Push a branch to a remote repository </a></h2>
 <p>
-  リモートリポジトリにブランチをプッシュする方法を解説します。<a href="/blog/20210729082405.html">コミットが完了</a>していることを前提とします。
+  Learn how to push a branch to a remote repository. It is assumed that <a href="/blog/20210729082405.html"> commit is complete</a>.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -94,73 +91,73 @@
 </div>
 
 
-<h3>リモートリポジトリとは</h3>
+<h3> What is a remote repository </h3>
 <p>
-  リモートリポジトリとは、リモートにあるリポジトリのことです。たとえば、Github上にあるリポジトリが該当します。
+  A remote repository is a remote repository. For example, a repository on Github.
 </p>
 <p>
-  リモートリポジトリは、URLを使って表現できます。
+  Remote repositories can be represented using URLs.
 </p>
 <pre>
-# リモートリポジトリをURLで表現
+#Represent remote repository with URL
 git@github.com:yuki-kimoto/perlzemigit.git
 </pre>
 <p>
-  ただしこれは、覚えておくことが面倒なので、名前を付けておくことが、ほとんどです。名前を付けるには「git remote add」コマンドを使用します。
+  However, this is a hassle to remember, so most of the time you give it a name. Use the "git remote add" command to name it.
 </p>
 <pre>
 git remote add origin git@github.com:yuki-kimoto/perlzemigit.git
 </pre>
 <p>
-  デフォルトのリモートブランチは、originという名前を付けるのが慣例です。
+  It is customary to name the default remote branch origin.
 </p>
-<h3>ブランチとは</h3>
+<h3> What is a branch? </H3>
 <p>
-  Gitのブランチについて解説します。Gitのブランチとは、コミットへの参照です。それぞれのコミットはコミットIDで表現されますが、そのコミットIDが伸びている先頭の部分に、名前を付けたものがブランチです。
+  I will explain about the branch of Git. A Git branch is a reference to a commit. Each commit is represented by a commit ID, but the first part where the commit ID extends is the branch.
 </p>
 <pre>
             main
-* - * - * - *
+*-*-*-*
   |
-  - * - *
+  -*-*
         add_api
 </pre>
 <p>
-  Gitでは、デフォルトのブランチ名はmasterです。masterは、奴隷制度の主人をイメージするというユーザーのために、新しいバージョンのGitでは、デフォルトブランチ名を任意でつけることもできるようになっています。
+  In Git, the default branch name is master. For users who imagine master as a slavery master, the new version of Git allows you to optionally give it a default branch name.
 </p>
-<h3>ローカルリポジトリとリモートリポジトリ</h3>
+<h3> Local and remote repositories </h3>
 <p>
-  Gitでは、ローカルリポジトリもリモートリポジトリも、ファイル全体の完全な情報を持つのでした。
-</p>
-<p>
-  プッシュとはなんでしょうか? プッシュとは、以下の二つを行うことだと考えてください。
+  In Git, both local and remote repositories had complete information about the entire file.
 </p>
 <p>
-  1. ローカルリポジトリの情報をリモートリポジトリに転送する
+  What is a push? Think of a push as doing two things:
 </p>
 <p>
-  2. ブランチの先頭を合わせる
+  1. Transfer information from the local repository to the remote repository
 </p>
 <p>
-  ローカルリポジトリが次の状態だとします。
+  2. Align the beginning of the branch
+</p>
+<p>
+  Suppose your local repository is in the following state:
 </p>
 <pre>
             main
-* - * - * - * 
+*-*-*-*
 </pre>
 <p>
-  リモートリポジトリ「origin」が次のような状態だとします。
+  Suppose the remote repository "origin" is in the following state.
 </p>
 <pre>
         main
-* - * - *
+*-*-*
 </pre>
 <p>
-  プッシュとは、つまり、ローカルリポジトリの新しいコミットを、リモートリポジトリに転送し、ブランチの位置を合わせることです。
+  Pushing means transferring a new commit from your local repository to a remote repository and aligning your branches.
 </p>
-<h3>プッシュする</h3>
+<h3> Push </h3>
 <p>
-  プッシュするには「<a href="/blog/20210812084715.html">git push</a>」コマンドを使用します。引数は、リモートリポジトリ名、ブランチ名です。
+  Use the "<a href="/blog/20210812084715.html"> git push</a>" command to push. The arguments are the remote repository name and branch name.
 </p>
 <pre>
 git push origin main
@@ -191,8 +188,7 @@ git push origin main
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

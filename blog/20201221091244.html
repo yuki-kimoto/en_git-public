@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-RZ64QNYV4Y');
 </script>
-<title>Gitで削除したファイルを復元する簡単な方法 - Git Tutorial</title>
-<meta name="description" content="「あのファイル過去に削除しちゃったけど、実は必要だった」「あの消しちゃったプログラムを改造して、新しいプログラムを作りたい」。Gitで削除したファイルを復元する簡単な方法のご紹介です。">
+<title> Easy way to restore deleted files with Git  - Git Tutorial</title>
+<meta name="description" content=""I deleted that file in the past, but I actually needed it." "I want to modify that deleted program to create a new program." Here's an easy way to recover deleted files in Git.">
   </head>
   <body>
     <div class="container">
@@ -52,31 +50,30 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> Git </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/tutorial.html">
-        <span itemprop="name">入門</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Introduction </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20201221091244.html">Gitで削除したファイルを復元する簡単な方法</a></h3>
+<h2><a href="/blog/20201221091244.html"> Easy way to restore deleted files with Git </a></h3>
 <p>
-  「あのファイル過去に削除しちゃったけど、実は必要だった」「あの消しちゃったプログラムを改造して、新しいプログラムを作りたい」。Gitで削除したファイルを復元する簡単な方法のご紹介です。
+  "I deleted that file in the past, but I actually needed it." "I want to modify that deleted program to create a new program." Here's an easy way to recover deleted files in Git.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -95,11 +92,11 @@
 
 
 <p>
-  Gitはすべてのファイルとディレクトリの変更履歴を持っています。ですので、必要なことは、過去の状態に戻す方法と、ファイルを削除したコミットのひとつ前のコミットを知ることです。
+  Git has a history of changes to all files and directories. So all you need to do is know how to revert to the past state and the commit immediately before the one that deleted the file.
 </p>
-<h3>ファイルを削除したコミットのひとつ前のコミットIDを見つける</h3>
+<h3> Find the commit ID immediately before the commit that deleted the file </h3>
 <p>
-  <a href="/blog/20201103093112.html">git log</a>コマンドで、過去のコミットを見ることができます。
+  You can see past commits with the <a href="/blog/20201103093112.html"> git log</a> command.
 </p>
 <pre>
 git log
@@ -107,60 +104,60 @@ git log
 <pre>
 commit 23cd914d4f7087a01a1d23c66edc98026013102d
 Author: Kimoto Yuki &lt;kimoto.yuki@google.com&gt;
-Date:   Wed Nov 25 10:20:34 2020 +0900
+Date: Wed Nov 25 10:20:34 2020 +0900
 
-    不要な○○ファイルを削除
+    Delete unnecessary XX files
 
 commit a15a73d62711fd9a5469ae7791241a4fd8978537
 Author: Kimoto Yuki &lt;kimoto.yuki@google.com&gt;
-Date:   Wed Nov 25 10:20:34 2020 +0900
+Date: Wed Nov 25 10:20:34 2020 +0900
 
-    ヘッダーを修正
+    Fix header
 </pre>
 <p>
-  ファイル消す前のコミットID「a15a73d...」がすぐに見つかればそれでOKです。
+  If you can find the commit ID "a15a73d ..." before deleting the file immediately, that's OK.
 </p>
 <p>
-  消したのが、だいぶ前だった場合、コミットメッセージをたどるのは大変です。そのような場合は、コミットメッセージを検索しましょう。コミットメッセージは、思い出す必要がありますよ。
+  If you erased it a long time ago, it's hard to follow the commit message. In that case, search for the commit message. The commit message needs to be remembered.
 </p>
 <pre>
-git log --grep 削除
+git log --grep remove
 </pre>
 <p>
-  コミットメッセージに「〇〇を削除」みたいなのを入れておいた場合は、これで検索できます。
+  If you put something like "Delete XX" in the commit message, you can search with this.
 </p>
 <p>
-  このコミットのコミットIDを取得しましょう。
+  Let's get the commit ID of this commit.
 </p>
 <pre>
 commit 23cd914d4f7087a01a1d23c66edc98026013102d
 Author: Kimoto Yuki &lt;kimoto.yuki@google.com&gt;
-Date:   Wed Nov 25 10:20:34 2020 +0900
+Date: Wed Nov 25 10:20:34 2020 +0900
 
-    不要な○○ファイルを削除
+    Delete unnecessary XX files
 </pre>
 <p>
-  Gitでは、一つ前のコミットIDというのを「コミットID^」で表現できます。
+  In Git, the previous commit ID can be expressed by "commit ID ^".
 </p>
 <pre>
-# 一つ前のコミットのコミットID
-23cd914d4f7087a01a1d23c66edc98026013102d^
+# Commit ID of the previous commit
+23cd914d4f7087a01a1d23c66edc98026013102d ^
 </pre>
-<h3>ブランチを作成してチェックアウト</h3>
+<h3> Create a branch and check out </h3>
 <p>
-  上記のコミットIDから<a href="/blog/20201220091244.html">git branch</a>で新しいブランチを作りましょう。ここでは名前は「old」とします。
+  Let's create a new branch with <a href="/blog/20201220091244.html"> git branch</a> from the above commit ID. Here, the name is "old".
 </p>
 <pre>
-git branch old 23cd914d4f7087a01a1d23c66edc98026013102d^
+git branch old 23cd914d4f7087a01a1d23c66edc98026013102d ^
 </pre>
 <p>
-  git checkoutして、ブランチを切り替えます。
+  Do a git checkout to switch branches.
 </p>
 <pre>
 git checkout old
 </pre>
 <p>
-  古いファイルがあるかを見つけて、どこかにコピーしましょう。そして、元のブランチに戻ります。
+  Find out if there is an old file and copy it somewhere. Then go back to the original branch.
 </p>
 
   </div>
@@ -188,8 +185,7 @@ git checkout old
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

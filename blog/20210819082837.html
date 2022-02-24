@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-RZ64QNYV4Y');
 </script>
-<title>git merge - マージする - Git Tutorial</title>
-<meta name="description" content="「git merge」コマンドでマージができます。git mergeの引数はコミットIDですが、ブランチはコミットIDに名前を付けたもので、日常の用途においては、ブランチ名を指定してマージを行います。マージ先は、現在のカレントブランチです。">
+<title> git merge --merge  - Git Tutorial</title>
+<meta name="description" content="You can merge with the "git merge" command. The argument of git merge is the commit ID, but  branch is the name of the commit ID, and for everyday use, specify the branch name. And merge. The merge destination is the current current branch.">
   </head>
   <body>
     <div class="container">
@@ -52,31 +50,30 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> Git </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop="name">コマンド</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> command </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210819082837.html">git merge - マージする</a></h2>
+<h2><a href="/blog/20210819082837.html"> git merge --merge </a></h2>
 <p>
-  「git merge」コマンドでマージができます。git mergeの引数はコミットIDですが、<a href="/blog/20201220091244.html">ブランチ</a>はコミットIDに名前を付けたもので、日常の用途においては、ブランチ名を指定してマージを行います。マージ先は、現在のカレントブランチです。
+  You can merge with the "git merge" command. The argument of git merge is the commit ID, but <a href="/blog/20201220091244.html"> branch</a> is the name of the commit ID, and for everyday use, specify the branch name. And merge. The merge destination is the current current branch.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -95,90 +92,90 @@
 
 
 <pre>
-git merge ブランチ名
+git merge branch name
 </pre>
-<h3>マージって何?</h3>
+<h3> What is a merge? </h3>
 <p>
-  マージとは、ソースコードに加えられた変更を、取り込むことをいいます。
+  Merging is the incorporation of changes made to the source code.
 </p>
 <p>
-  たとえば私の現在のmainブランチに「a.txt」というファイルがあったとします。
+  For example, suppose you have a file called "a.txt" in my current main branch.
 </p>
 <p>
-  <b>わたしの現在のmainブランチの「a.txt」の内容</b>
+  <b> Contents of "a.txt" in my current main branch </b>
 </p>
 <pre>
 foo
-bar
+bar bar
 </pre>
 <p>
-  マシュマロさんが「main」ブランチから派生させた「masu_fix_bug」というブランチで、作業を行い、コミットをしていったとしましょう。そして「a.txt」は次のようになりました。
+  Let's say Marshmallow worked and committed in a branch called "masu_fix_bug" that was derived from the "main" branch. And "a.txt" became as follows.
 </p>
 <p>
-  <b>マシュマロさんの「masu_fix_bug」ブランチの「a.txt」の内容</b>
+  <b> Contents of "a.txt" in Marshmallow's "masu_fix_bug" branch </b>
 </p>
 <pre>
 foo
-bar
+bar bar
 baz
 </pre>
 <p>
-  私は「main」ブランチにマシュマロさんの「masu_fix_bug」の内容を取り込みたい。
+  I want to include the contents of Marshmallow's "masu_fix_bug" in the "main" branch.
 </p>
 <p>
-  このような場合に、差分を解析して、取り込んでくれるのが、マージという機能です。差分は「<a href="/blog/20210805092910.html">git diff</a>」コマンドで確認することができます。
+  In such a case, the function called merging analyzes the difference and captures it. You can check the difference with the "<a href="/blog/20210805092910.html"> git diff</a>" command.
 </p>
 <pre>
-git diff マージしたいブランチ名
+git diff The name of the branch you want to merge
 </pre>
-<h3>マージのアルゴリズム</h3>
+<h3> Merge algorithm </h3>
 <p>
-  マージには、適用されるアルゴリズムが複数あります。
+  There are multiple algorithms applied to merging.
 </p>
-<h4>ファストフォワードマージ</h4>
+<h4> Fast forward merge </h4>
 <p>
-  一番単純なマージのアルゴリズムです。コミットを単純に進めることで、マージが可能な場合は、これが選択されます。
+  The simplest merge algorithm. If a merge is possible by simply proceeding with the commit, this will be selected.
 </p>
-<h4>ノンファストフォワードマージ</h4>
+<h4> Non-fast forward merge </h4>
 <p>
-  二つのブランチの共通の祖先の位置からのそれぞれの差分をマージします。マージが衝突する場合があります。
-</p>
-<p>
-  ここで、びっくりするのは、マージするときに、<a href="https://en.linux.perlzemi.com/blog/20190401171737.html">vi</a>などのコマンドラインエディタが立ち上がることです。
+  Merges the differences from the positions of the common ancestors of the two branches. Marges may conflict.
 </p>
 <p>
-  何も問題がなければ「ESC」でコマンドモードにして「wq」「Enter」(保存して終了)と押して、マージを完了させましょう。
+  What surprises me here is that when merging, a command line editor such as <a href="https://en.linux.perlzemi.com/blog/20190401171737.html"> vi</a> is launched. am.
 </p>
-<h3>マージの衝突の解決</h3>
 <p>
-  マージが衝突した場合は、衝突を解決する必要があります。ぶつかった場合は、ソースコードの中に、以下のように表示されます。私はパスを「/foo」に変え、マシュマロさんはテキストを「Good bye」に変えてしまったので、衝突してしまいました。
+  If there are no problems, switch to command mode with "ESC" and press "wq" "Enter" (save and exit) to complete the merge.
+</p>
+<h3> Resolving merge conflicts </h3>
+<p>
+  If the merge conflicts, you need to resolve the conflict. In case of collision, the following will be displayed in the source code. I changed the path to "/ foo" and Marshmallow changed the text to "Good bye", so it clashed.
 </p>
 <pre>
-コードほにゃ前
+Before the code
 
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-&lt;a href="/foo"&gt;Hello&lt;/a&gt;
+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+&lt;a href="/foo"&gt; Hello&lt;/a&gt;
 =======
-&lt;a href="/bar"&gt;Good bye&lt;/a&gt;
+&lt;a href="/bar"&gt; Good bye&lt;/a&gt;
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; masu_fix_bug
 
-コードほにゃ後ろ
+Behind the code
 </pre>
 <p>
-  この部分は、どうあるべきなのかを、考えて、手動で修正する必要があります。修正の例です。
+  You need to think about what this part should be and fix it manually. Here is an example of a fix.
 </p>
 <pre>
-コードほにゃ前
+Before the code
 
-&lt;a href="/foo"&gt;Good bye&lt;/a&gt;
+&lt;a href="/foo"&gt; Good bye&lt;/a&gt;
 
-コードほにゃ後ろ
+Behind the code
 </pre>
 <p>
-  これで、二人の変更内容が正しく反映された内容ができました。
+  Now you have a content that correctly reflects the changes made by the two.
 </p>
 <p>
-  後は<a href="/blog/20201112094521.html">git add</a>コマンドで「git add .」して、<a href="/blog/20201113141302.html">git commit</a>コマンドで、コミットをする通常のコミット手順を行うだけです。
+  After that, use the <a href="/blog/20201112094521.html"> git add</a> command to "git add." And <a href="/blog/20201113141302.html"> git commit</a>. All you have to do with the command is the normal commit procedure to commit.
 </p>
 
   </div>
@@ -206,8 +203,7 @@ git diff マージしたいブランチ名
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

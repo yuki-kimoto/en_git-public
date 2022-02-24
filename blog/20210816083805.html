@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-RZ64QNYV4Y');
 </script>
-<title>git tag - タグをつける - Git Tutorial</title>
-<meta name="description" content="「git tag」コマンドで、タグをつけることができます。タグとは、特定のコミットの一つに名前を付ることができる機能です。バージョン名をつけたり、特定のコミット位置を記憶しておきたい場合に利用されます。">
+<title> git tag --tagging  - Git Tutorial</title>
+<meta name="description" content="You can add tags with the "git tag" command. Tags are a feature that allows you to name one of a particular commit. It is used when you want to give a version name or remember a specific commit position.">
   </head>
   <body>
     <div class="container">
@@ -52,31 +50,30 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> Git </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop="name">コマンド</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> command </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210816083805.html">git tag - タグをつける</a></h2>
+<h2><a href="/blog/20210816083805.html"> git tag --tagging </a></h2>
 <p>
-  「git tag」コマンドで、タグをつけることができます。タグとは、特定のコミットの一つに名前を付ることができる機能です。バージョン名をつけたり、特定のコミット位置を記憶しておきたい場合に利用されます。
+  You can add tags with the "git tag" command. Tags are a feature that allows you to name one of a particular commit. It is used when you want to give a version name or remember a specific commit position.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -94,77 +91,77 @@
 </div>
 
 
-<h3>現在のコミットの先頭位置にタグ名をつける</h3>
+<h3> Add a tag name to the beginning of the current commit </h3>
 <p>
-  現在のコミットにタグ名をつけてみましょう。タグ名は「foo」です。
+  Let's give the current commit a tag name. The tag name is "foo".
 </p>
 <pre>
-# タグをつける
+#Tag
 git tag foo
 </pre>
-<h4>コミットIDを明示してタグ名をつける</h4>
+<h4> Specify the commit ID and give it a tag name </h4>
 <p>
-  コミットIDを明示してタグ名をつけることもできます。
+  You can also specify the commit ID and give it a tag name.
 </p>
 <pre>
-# タグをつける
-git tag foo コミットID
+#Tag
+git tag foo commit ID
 </pre>
 <p>
-  コミットIDを調べたい場合は「<a href="/blog/20201103093112.html">git log</a>」コマンドで調べられます。
+  If you want to find out the commit ID, use the "<a href="/blog/20201103093112.html"> git log</a>" command.
 </p>
-<h3>タグの一覧を表示する</h3>
+<h3> Display a list of tags </h3>
 <p>
-  タグの一覧を表示するには引数をつけずに「git tag」コマンドを実行します。
+  To see a list of tags, run the "git tag" command with no arguments.
 </p>
 <pre>
-# タグの一覧を表示する
+#Display a list of tags
 git tag
 </pre>
 <p>
-  出力結果のサンプルです。
+  This is a sample output result.
 </p>
 <pre>
 v1.0
 v1.2
 20210816
 </pre>
-<h3>タグをリモートリポジトリに反映する</h3>
+<h3> Reflect tags in remote repository </h3>
 <p>
-  タグをリモートリポジトリに反映するには「<a href="/blog/20210812084715.html">git push</a>」コマンドを使って「git push リモートブランチ名 タグ名」とします。
+  To reflect the tag in the remote repository, use the "<a href="/blog/20210812084715.html"> git push</a>" command and set it to "git push remote branch name tag name".
 </p>
 <pre>
-# タグをリモートリポジトリに反映する
+Reflect # tag in remote repository
 git push origin v1.0
 </pre>
-<h3>すべてのタグをリモートリポジトリに反映する</h3>
+<h3> Reflect all tags in remote repository </h3>
 <p>
-  すべてのタグをリモートリポジトリに反映するには<a href="/blog/20210812084715.html">git push</a>コマンドで「--tags」オプションを使用します。
+  To apply all tags to the remote repository, use the "--tags" option with the <a href="/blog/20210812084715.html"> git push</a> command.
 </p>
 <pre>
-# すべてのタグをリモートリポジトリに反映する
+# Reflect all tags in remote repository
 git tag origin --tags
 </pre>
-<h3>バージョン番号をつける</h3>
+<h3> Add version number </h3>
 <p>
-  「git tag」コマンドで、バージョン番号をつけてみましょう。
+  Let's add a version number with the "git tag" command.
 </p>
 <pre>
 git tag v1.0
 </pre>
-<h3>日付をタグ名に使って記憶しておく</h3>
+<h3> Use the date as the tag name and memorize it </h3>
 <p>
-  よく使うテクニックとして、現在の日付をタグにつけて、その時点のコミットを記憶しておくというのがあります。Gitでは、マージを行った後に、間違いがわかって、マージを行う前の状態に、どうやって戻ったらよいか、迷うということが良く起こります。
+  A common technique is to tag the current date to remember the commit at that time. In Git, it's common to find mistakes after a merge and wonder how to get back to what they were before the merge.
 </p>
 <p>
-  そんなときは、あらかじめ、日付を使って、タグ名をつけておくと、その状態に戻れるので便利です。
+  In such a case, it is convenient to use the date and give a tag name in advance so that you can return to that state.
 </p>
 <pre>
-# 日付をタグ名にする
+# Use date as tag name
 git tag 20210816
 </pre>
 <p>
-  前の状態に戻したいときは<a href="/blog/20210806133244.html">git reset</a>コマンドを使って、「git reset --hard タグ名」とします。(「git reset」コマンドの「git reset --hard」は気をつけて、使ってください。)
+  If you want to return to the previous state, use the <a href="/blog/20210806133244.html"> git reset</a> command and set it to "git reset --hard tag name". (Be careful when using "git reset --hard" in the "git reset" command.)
 </p>
 <pre>
 git reset --hard 20210816
@@ -195,8 +192,7 @@ git reset --hard 20210816
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

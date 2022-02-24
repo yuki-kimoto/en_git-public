@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-RZ64QNYV4Y');
 </script>
-<title>Gitで管理しないファイルを設定する - .gitignore - Git Tutorial</title>
-<meta name="description" content="Gitで管理しないファイルを設定しておくには「.gitignore」ファイルを使用します。touchコマンドでファイルを作成します。「.gitignore」で記述しておくと、git addコマンドで、コミット準備の状態にされなくなります。">
+<title> Set files not managed by Git --.gitignore  - Git Tutorial</title>
+<meta name="description" content="Use the ".gitignore" file to set files that are not managed by Git. Create the file with the  touch command. If you write it in ".gitignore", it will not be ready for commit with  git add command.">
   </head>
   <body>
     <div class="container">
@@ -52,31 +50,30 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> Git </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/tutorial.html">
-        <span itemprop="name">入門</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Introduction </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20200610092020.html">Gitで管理しないファイルを設定する - .gitignore</a></h2>
+<h2><a href="/blog/20200610092020.html"> Set files not managed by Git --.gitignore </a></h2>
 <p>
-  Gitで管理しないファイルを設定しておくには「.gitignore」ファイルを使用します。<a href="https://en.linux.perlzemi.com/blog/20191205081119.html">touch</a>コマンドでファイルを作成します。「.gitignore」で記述しておくと、<a href="/blog/20201112094521.html">git addコマンド</a>で、コミット準備の状態にされなくなります。
+  Use the ".gitignore" file to set files that are not managed by Git. Create the file with the <a href="https://en.linux.perlzemi.com/blog/20191205081119.html"> touch</a> command. If you write it in ".gitignore", it will not be ready for commit with <a href="/blog/20201112094521.html"> git add command</a>.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -98,75 +95,75 @@
 touch .gitignore
 </pre>
 <p>
-  .gitignoreは、リポジトリのどこにでも置くことができますが、リポジトリのトップで管理することを、推奨します。
+  .gitignore can be placed anywhere in the repository, but it is recommended to manage it at the top of the repository.
 </p>
-<h4>絶対パス</h4>
+<h4> Absolute path </h4>
 <p>
-  絶対パスで記述すると、Gitリポジトリのルートからの記述になります。
+  If you write it with an absolute path, it will be written from the root of the Git repository.
 </p>
 <p>
-  「/foo」が管理されなくなる。
-</p>
-<pre>
-/foo
-</pre>
-<p>
-  「/foo/bar」が管理されなくなる。
+  "/ Foo" is no longer managed.
 </p>
 <pre>
-/foo/bar
+/ foo
 </pre>
-<h4>相対パス</h4>
 <p>
-  相対パスで書くと、Gitリポジトリのルートディレクトリの中のどこかに含まれているファイルが管理されなくなります。
+  "/ Foo / bar" is no longer managed.
+</p>
+<pre>
+/ foo / bar
+</pre>
+<h4> Relative path </h4>
+<p>
+  If you write it with a relative path, the files contained somewhere in the root directory of the Git repository will not be managed.
 </p>
 <p>
-  以下の場合は「foo.txt」というファイルすべてが、管理されなくなります。
+  In the following cases, all the files "foo.txt" will not be managed.
 </p>
 <pre>
 foo.txt
 </pre>
 <p>
-  ワイルドカードを利用することができるので、ログだけを管理しないということができます。
+  You can use wildcards, so you can say that you don't just manage the logs.
 </p>
 <pre>
-*.log
+* .log
 </pre>
-<h4>管理を外したものの中で、再び管理する</h4>
+<h4> Manage again in the one that was removed </h4>
 <p>
-  管理を外したものの中で、再び管理するには「!」を使います。これ、どこで使うの?
+  Use "!" To manage again among the unmanaged ones. Where do you use this?
 </p>
-<h4>ディレクトリを管理する</h4>
+<h4> Manage directories </h4>
 <p>
-  .gitignoreを書いて、必ずつまづくのは、ディレクトリだけを管理できないということです。これはGitの仕様です。
-</p>
-<p>
-  ディレクトリを管理したい場合は、ディレクトリの中にまず「.gitkeep」というファイルを作成します。これは慣習的な名前で、推奨される名前です。
+  The only stumbling block to writing .gitignore is that you can't just manage directories. This is a Git specification.
 </p>
 <p>
-  fooというディレクトリを管理したい場合は「foo」ディレクトリの中に「.gitkeep」を作成します。
+  If you want to manage a directory, first create a file called ".gitkeep" in the directory. This is a customary name and is the recommended name.
 </p>
 <p>
-  そして、ワイルドカードを使って、まずfooディレクトリの中にあるファイルすべてを、管理しないという記述を行います。
+  If you want to manage a directory called foo, create ".gitkeep" in the "foo" directory.
+</p>
+<p>
+  Then use wildcards to state that you don't manage all the files in the foo directory first.
 </p>
 <pre>
-foo/*
+foo / *
 </pre>
 <p>
-  .gitkeepも管理を外れているので、「!」を使って、再び管理するという記述を行います。
+  Since .gitkeep is also out of control, use "!" To describe that it will be managed again.
 </p>
 <pre>
-!foo/.gitkeep
+! foo / .gitkeep
 </pre>
 <p>
-  まとめて書くと以下になります。
+  The following is a summary.
 </p>
 <pre>
-foo/*
-!foo/.gitkeep
+foo / *
+! foo / .gitkeep
 </pre>
 <p>
-  これで、fooディレクトリをGitリポジトリで管理できます。
+  Now you can manage your foo directory in your Git repository.
 </p>
 
   </div>
@@ -194,8 +191,7 @@ foo/*
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

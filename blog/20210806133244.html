@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-RZ64QNYV4Y');
 </script>
-<title>git resetコマンド - コミットの位置を移動する - Git Tutorial</title>
-<meta name="description" content="git resetコマンドは、現在のブランチのコミットの位置を移動するコマンドです。">
+<title> git reset command-move commit position  - Git Tutorial</title>
+<meta name="description" content="The git reset command is a command that moves the commit position of the current branch.">
   </head>
   <body>
     <div class="container">
@@ -52,31 +50,30 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> Git </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop="name">コマンド</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> command </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210806133244.html">git resetコマンド - コミットの位置を移動する</a></h2>
+<h2><a href="/blog/20210806133244.html"> git reset command-move commit position </a></h2>
 <p>
-  git resetコマンドは、現在のブランチのコミットの位置を移動するコマンドです。
+  The git reset command is a command that moves the commit position of the current branch.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -95,75 +92,75 @@
 
 
 <pre>
-git reset コミットID
+git reset commit ID
 </pre>
 <p>
-  git resetコマンドは、使い方によっては、現在のワーキングディレクトリの変更内容をなかったことにしてしまうので、この点について、先に書いておきます。
+  Depending on how you use it, the git reset command will assume that you haven't changed the current working directory, so I'll write about this first.
 </p>
-<h3>--hardオプションは、ワーキングディレクトリの変更すべて元に戻す</h3>
+<h3> --hard option undo all working directory changes </h3>
 <p>
-  git resetコマンドの「--hard」オプションは、ワーキングディレクトリに行われている変更をすべて元に戻します。
+  The "--hard" option of the git reset command undoes any changes made to the working directory.
 </p>
 <pre>
-# ワーキングディレクトリに行われている変更をすべて元に戻し
-# コミット位置を変更
-git reset --hard コミットID
+# Revert all changes made to the working directory
+# Change commit position
+git reset --hard commit ID
 </pre>
 <p>
-  ですので、git resetコマンドを使う場合は、コミットの位置だけを移動したいのか、ワーキングディレクトリに加えた変更を戻したいのかということを、まずよく考えてください。
+  So, when using the git reset command, first think carefully about whether you want to move only the commit position or revert the changes you made to your working directory.
 </p>
-<h3>ワーキングディレクトリに加えた変更をすべて元に戻したい</h3>
+<h3> I want to undo all the changes I made to the working directory </h3>
 <p>
-  ソースコードを変更していて、ワーキングディレクトリに加えた変更を元に戻したという場合は「--hard」オプションを指定します。コミットIDが省略された場合は、最新のコミット位置に戻ります。
+  If you have changed the source code and undoed the changes you made to the working directory, specify the "--hard" option. If the commit ID is omitted, it reverts to the latest commit position.
 </p>
 <pre>
-# ワーキングディレクトリに加えた変更をすべて元に戻したい
+#I want to undo all the changes I made to the working directory
 git reset --hard
 </pre>
-<h3>ワーキングディレクトリに加えた変更を維持して前のコミットに戻したい</h3>
+<h3> I want to keep the changes I made to the working directory and revert to the previous commit </h3>
 <p>
-  間違ってコミットしてしまった場合、ワーキングディレクトリに加えた変更を維持して、前のコミットに戻したいという場合があります。そのような場合は「--hard」オプションを指定せずに、一つ前のコミットIDを指定します。
+  If you accidentally commit, you may want to keep the changes you made to your working directory and revert to your previous commit. In such a case, specify the previous commit ID without specifying the "--hard" option.
 </p>
 <pre>
-# ワーキングディレクトリに加えた変更を維持して前のコミットに戻したい
-git reset ひとつ前のコミットID
+#I want to keep the changes I made to the working directory and revert to the previous commit
+git reset Previous commit ID
 </pre>
-<h3>過去のある状態を復元したい</h3>
+<h3> I want to restore a certain state in the past </h3>
 <p>
-  過去に削除した実装をもう一度参考にしたいなど、過去のある状態に戻したいという場合があります。このような場合は、<a href="/blog/20201220091244.html">git branch</a>コマンドで、過去用のブランチを作成してから、「git reset --hard」で過去の状態に戻すのが安全です。
+  There are times when you want to return to a certain state in the past, such as wanting to refer to an implementation that was deleted in the past again. In such a case, use the <a href="/blog/20201220091244.html"> git branch</a> command to create a branch for the past, and then use "git reset --hard" to change to the past state. It's safe to put it back.
 </p>
 <pre>
-# oldブランチを作成
+#create an old branch
 git branch old
 
-# oldブランチに切り替え
+Switch to the #old branch
 git checkout old
 
-# 現在のブランチがoldであることを確認
+# Make sure the current branch is old
 git branch
 
-# 以下のように出力されることを確認
+# Confirm that the output is as follows
   main
 * old
 
-# 過去の状態に戻る
-git reset --hard 過去のある時点のコミットID
+#Return to past state
+git reset --hard Commit ID at some point in the past
 </pre>
 <p>
-  戻りたい地点を探すには、コミットメッセージを検索できる、<a href="/blog/20201103093112.html">git log</a>コマンドの「--grep」オプションが便利です。
+  The "--grep" option of the <a href="/blog/20201103093112.html"> git log</a> command, which allows you to search for commit messages, is useful for finding where you want to go back.
 </p>
 <pre>
-git log --grep 'fix foo'
+git log --grep'fix foo'
 </pre>
 <p>
-  コミットIDが見つかった、その状態に戻したければ、そのコミットIDを使いましょう。また、その一つ前に戻りたいという場合もあると思います。その場合は、一つ前のコミットを表現する「^」を使えます。
+  If you found the commit ID and want to return to that state, use that commit ID. Also, you may want to go back one step before that. In that case, you can use "^" to express the previous commit.
 </p>
 <pre>
-# 見つかったコミットIDに戻す
-git reset --hard コミットID
+#Revert to found commit ID
+git reset --hard commit ID
 
-# 見つかったコミットIDの直前に戻す
-git reset --hard コミットID^
+#Revert to just before the found commit ID
+git reset --hard commit ID ^
 </pre>
 
   </div>
@@ -191,8 +188,7 @@ git reset --hard コミットID^
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

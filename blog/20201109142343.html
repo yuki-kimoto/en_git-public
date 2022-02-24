@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-RZ64QNYV4Y');
 </script>
-<title>git init - Gitリポジトリの初期化 - Git Tutorial</title>
-<meta name="description" content="Gitリポジトリを初期化するには「git init」コマンドを使用します。">
+<title> git init --Initialize Git repository  - Git Tutorial</title>
+<meta name="description" content="Use the "git init" command to initialize the Git repository.">
   </head>
   <body>
     <div class="container">
@@ -52,31 +50,30 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> Git </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop="name">コマンド</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> command </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20201109142343.html">git init - Gitリポジトリの初期化</a></h2>
+<h2><a href="/blog/20201109142343.html"> git init --Initialize Git repository </a></h2>
 <p>
-  Gitリポジトリを初期化するには「git init」コマンドを使用します。
+  Use the "git init" command to initialize the Git repository.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -98,27 +95,27 @@
 git init
 </pre>
 <p>
-  perlzemiというディレクトリをGitリポジトリとして初期化するサンプルです。<a href="https://en.linux.perlzemi.com/blog/20191012191854.html">cdコマンド</a>で「perlzemi」ディレクトリに移動してから「git init」コマンドを実行します。
+  This is a sample to initialize a directory called perlzemi as a Git repository. Use the <a href="https://en.linux.perlzemi.com/blog/20191012191854.html"> cd command</a> to change to the "perlzemi" directory and then run the "git init" command.
 </p>
 <pre>
 cd perlzemi
 git init
 </pre>
 <p>
-  初期化すると「.git」というディレクトリが作成されます。
+  Initialization will create a directory called ".git".
 </p>
 <pre>
 .git
 </pre>
 <p>
-  「.git」ディレクトリの中には、このリポジトリに関するGitの設定や、Gitのコミット情報が保存されます。
+  The ".git" directory stores Git settings for this repository and Git commit information.
 </p>
-<h3>ワーキングディレクトリではない生のGitリポジトリを作成する</h3>
+<h3> Create a raw Git repository that is not a working directory </h3>
 <p>
-  ワーキングディレクトリを持たない生のGitリポジトリを作成するには「git init」の「--bare」オプションを使用します。
+  To create a raw Git repository without a working directory, use the "--bare" option of "git init".
 </p>
 <p>
-  開発者として使う場合は、生のGitリポジトリ(.gitに該当するディレクトリだけ)を作成する必要はないと思いますが、Githubのようなリポジトリ管理Webインターフェースを開発する場合には、作業ディレクトリを持たないGitリポジトリを作成する場合があります。
+  I don't think you need to create a raw Git repository (only the directory that corresponds to .git) if you use it as a developer, but if you develop a repository management web interface like Github, you have a working directory. You may create a Git repository that doesn't exist.
 </p>
 <pre>
 mkdir foo.git
@@ -151,8 +148,7 @@ git init --bare
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

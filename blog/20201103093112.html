@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-RZ64QNYV4Y');
 </script>
-<title>git log - コミットログの内容を見る - Git Tutorial</title>
-<meta name="description" content="コミットログの内容を見るには「git log」コマンドを使用します。">
+<title> git log --View the contents of the commit log  - Git Tutorial</title>
+<meta name="description" content="Use the "git log" command to see the contents of the commit log.">
   </head>
   <body>
     <div class="container">
@@ -52,31 +50,30 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> Git </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop="name">コマンド</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> command </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20201103093112.html">git log - コミットログの内容を見る</a></h2>
+<h2><a href="/blog/20201103093112.html"> git log --View the contents of the commit log </a></h2>
 <p>
-  コミットログの内容を見るには「git log」コマンドを使用します。
+  Use the "git log" command to see the contents of the commit log.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -95,89 +92,89 @@
 
 
 <pre>
-# コミットログの内容を見る
+# View the contents of the commit log
 git log
 </pre>
 <p>
-  コミットログが表示されます。コミットID、著者、コミット日付、コミットメッセージが見れます。
+  The commit log is displayed. You can see the commit ID, author, commit date, and commit message.
 </p>
 <pre>
 commit c0881683c414c3e44ee6e337e295a476a8f7e5ec
 Author: Yuki Kimoto &lt;kimoto.yuki@gmail.com&gt;
-Date:   Fri Oct 16 08:27:22 2020 +0900
+Date: Fri Oct 16 08:27:22 2020 +0900
 
     fix echange api string return value bug
 
 commit 45a834a05edb51f412b63d67699ea5179e32e70a
 Author: Yuki Kimoto &lt;kimoto.yuki@gmail.com&gt;
-Date:   Fri Oct 16 07:54:23 2020 +0900
+Date: Fri Oct 16 07:54:23 2020 +0900
 
     update MANIFEST
 
 commit 213919f220f8ee6803edfe41b495f6e98c432437
 Author: Yuki Kimoto &lt;kimoto.yuki@gmail.com&gt;
-Date:   Fri Oct 16 07:53:39 2020 +0900
+Date: Fri Oct 16 07:53:39 2020 +0900
 
     add type check compiler error tests
 </pre>
-<h3>コミットログを下に進める</h3>
+<h3> Advance the commit log down </h3>
 <p>
-  コミットログを下に進めるには「Space」キーを使用します。
+  Use the "Space" key to move the commit log down.
 </p>
 <p>
-  下へ、下へ読んでいけます。
+  You can read down, down.
 </p>
-<h3>コミットログの表示を終了する</h3>
+<h3> End the display of the commit log </h3>
 <p>
-  コミットログの表示を終了するには「q」と入力してEnterを押します。
+  To finish viewing the commit log, type q and press Enter.
 </p>
-<h3>コミットログを検索する</h3>
+<h3> Search the commit log </h3>
 <p>
-  コミットログをコミットメッセージで検索するには「--grep」オプションを使用します。文字列には検索したい文字列を入力します。
+  Use the "--grep" option to search the commit log for commit messages. Enter the character string you want to search for in the character string.
 </p>
 <pre>
-git log --grep 文字列
+git log --grep string
 </pre>
 <p>
-  検索にマッチしたコミットログを取り出すことができます。
+  You can retrieve the commit log that matches your search.
 </p>
-<h4>マッチしたコミットIDの一つ前のコミットIDを知りたい</h4>
+<h4> I want to know the commit ID immediately before the matched commit ID </h4>
 <p>
-  マッチしたコミットIDの一つ前のコミットIDを知りたいという場合が、たまにありますね。
-</p>
-<p>
-  このような場合は、実は「コミットID^」という記法で、一つ前のコミットIDを指定することができます。「コミットID^^」で2つ前、「コミットID^^^」で3つ前が指定できます。
+  Sometimes you want to know the commit ID just before the matched commit ID.
 </p>
 <p>
-  検索にマッチしたコミットIDが以下だったとしましょう。
+  In such a case, you can actually specify the previous commit ID with the notation "Commit ID ^". "Commit ID ^^" can be specified two times before, and "Commit ID ^^^" can be specified three times before.
+</p>
+<p>
+  Let's say the commit IDs that match your search are:
 </p>
 <pre>
 be401600433693794eecbc65ed4b9e787902ed9a
 </pre>
 <p>
-  この一つ前との差分を見たいとしましょう。「コミットID^」という記法を使って、次のようにします。
+  Let's say you want to see the difference from the previous one. Using the notation "commit ID ^", do the following:
 </p>
 <pre>
-git diff be401600433693794eecbc65ed4b9e787902ed9a^ be401600433693794eecbc65ed4b9e787902ed9a
+git diff be401600433693794eecbc65ed4b9e787902ed9a ^ be401600433693794eecbc65ed4b9e787902ed9a
 </pre>
-<h3>git logはどんな時に使いますか?</h3>
+<h3> When do you use git log? </h3>
 <p>
-  git logを使う場面を紹介します。
+  I will introduce the scene where git log is used.
 </p>
 <p>
-  <a href="/blog/20201113141302.html">git commit</a>でコミットした後に確認する場合ですね。
+  If you want to check after committing with <a href="/blog/20201113141302.html"> git commit</a>.
 </p>
 <p>
-  <a href="/blog/20201220091244.html">git branch</a>で作成されたブランチで、どのようなブランチなのかを確認する場合も、git logで、コミットの先頭をみたいですね。
+  If you want to check what kind of branch the branch created by <a href="/blog/20201220091244.html"> git branch</a> is, you want to use git log to start the commit.
 </p>
 <p>
-  <a href="/blog/20201222100951.html">git checkout</a>で、ブランチを切り替えた時も、git logで、コミットの先頭を見たいです。
+  I want to see the beginning of the commit with git log even when switching branches with <a href="/blog/20201222100951.html"> git checkout</a>.
 </p>
 <p>
-  <a href="/blog/20210806133244.html">git reset</a>で、コミットをある状態に戻すときのコミットIDを確認する場合も使いますね。
+  You can also use <a href="/blog/20210806133244.html"> git reset</a> to check the commit ID when returning a commit to a certain state.
 </p>
 <p>
-  その他、コミットIDを確認したい場合がある場合は、そのたびに、使います。
+  In addition, if you want to check the commit ID, use it each time.
 </p>
 
   </div>
@@ -205,8 +202,7 @@ git diff be401600433693794eecbc65ed4b9e787902ed9a^ be401600433693794eecbc65ed4b9
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

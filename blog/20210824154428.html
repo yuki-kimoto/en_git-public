@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-RZ64QNYV4Y');
 </script>
-<title>git rebase - 複数のコミットを改変してまとめる - Git Tutorial</title>
-<meta name="description" content="git rebaseコマンドは、複数のコミットを改変してまとめるコマンドです。新しく作成されたコミットは、派生元のブランチの先に、ファストフォワードでマージできます。">
+<title> git rebase --Modify and combine multiple commits  - Git Tutorial</title>
+<meta name="description" content="The git rebase command is a command that modifies and combines multiple commits. Newly created commits can be merged fast forward ahead of the branch from which they were derived.">
   </head>
   <body>
     <div class="container">
@@ -52,31 +50,30 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> Git </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop="name">コマンド</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> command </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210824154428.html">git rebase - 複数のコミットを改変してまとめる</a></h2>
+<h2><a href="/blog/20210824154428.html"> git rebase --Modify and combine multiple commits </a></h2>
 <p>
-  git rebaseコマンドは、複数のコミットを改変してまとめるコマンドです。新しく作成されたコミットは、派生元のブランチの先に、ファストフォワードでマージできます。
+  The git rebase command is a command that modifies and combines multiple commits. Newly created commits can be merged fast forward ahead of the branch from which they were derived.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -95,34 +92,34 @@
 
 
 <pre>
-git rebase 派生元のブランチ
+git rebase Derived from branch
 </pre>
 <p>
-  mainブランチから分岐したfooブランチを作成して、コミット「A」「B」「C」と進んだとします。派生元のmainブランチを「git rebase」で指定すると、複数の「A」「B」「C」をまとめた一つのコミットが作成されます。これは、mainブランチにマージしたときに、ファストフォワードでマージできます。
+  Suppose you create a foo branch that branches off from the main branch and proceed with commits "A", "B", and "C". If you specify the main branch of the derivation source with "git rebase", one commit that combines multiple "A", "B", and "C" will be created. This can be merged fast forward when merged into the main branch.
 </p>
 <p>
-  git rebaseは、コミットを改変してまとめるコマンドなので、リポジトリを壊す可能性のあるコマンドです。git branchで、git rebase用の作業ブランチを作成するのがお勧めです。
+  Since git rebase is a command that modifies and puts together commits, it is a command that can corrupt the repository. With git branch, it's a good idea to create a working branch for git rebase.
 </p>
 <pre>
 git branch foo_rebase
 git checkout foo_rebase
 </pre>
-<h3>「git push」したものに対しては「git rebase」しない</h3>
+<h3> Don't "git rebase" for "git push" </h3>
 <p>
-  「git rebase」の注意点は、「git push」したものに対しては「git rebase」しないというものです。pushしていないブランチに対してだけ「git rebase」します。
+  The caveat of "git rebase" is that you don't "git rebase" anything you "git push". "Git rebase" only for branches that haven't been pushed.
 </p>
-<h3>けっきょく「git rebase」はどんな時に使いたいの?</h3>
+<h3> When do you want to use "git rebase"? </H3>
 <p>
-  一つ目は、ブランチを派生させて、小さな変更を積み重ねて、どんどんコミットをして、保存しながら、開発しているとします。コミットは、保存という用途もあるので、小さく保存しておきたいという要望があります。
-</p>
-<p>
-  ただし、この場合は、マージは、とても粒度が小さく、機能単位のコメントにはなっていません。マージされる側から見ると、履歴はすっきりしないものとなるでしょう。
+  The first is to derive a branch, stack small changes, commit more and more, save, and develop. Commits also have the purpose of saving, so there is a desire to keep them small.
 </p>
 <p>
-  このような場合は「git rebase」することで、履歴がきれいになります。
+  However, in this case, the merge is very fine-grained and is not a functional unit comment. From the point of view of the merged side, the history will be uncluttered.
 </p>
 <p>
-  一例をあげておくと、僕の場合は、一般的には、エンドユーザー向けのWebアプリケーション開発では、<a href="/blog/20210819082837.html">git merge</a>マージを使います。履歴をきれいに維持することは、あまり求められない場合です。また、オープンソース開発で、自分の変更をマージしてもらう場合は「git rebase」で、きれいにします。
+  In such a case, "git rebase" will clean the history.
+</p>
+<p>
+  As an example, in my case, I generally use <a href="/blog/20210819082837.html"> git merge</a> merges when developing web applications for end users. Keeping your history clean is a rare case. Also, in open source development, if you want your changes to be merged, use "git rebase" to clean them up.
 </p>
 
   </div>
@@ -150,8 +147,7 @@ git checkout foo_rebase
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

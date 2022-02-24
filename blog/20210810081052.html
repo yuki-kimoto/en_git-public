@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-RZ64QNYV4Y');
 </script>
-<title>git remote - リモートリポジトリの追加・変更・削除 - Git Tutorial</title>
-<meta name="description" content="git remoteコマンドは、リモートリポジトリの追加・変更・削除を行うコマンドです。もうすこし、正確に書くと、URLで表現されるリモートリポジトリを表す簡単な名前を、追加・変更・削除するコマンドです。">
+<title> git remote --Add / Modify / Delete Remote Repository  - Git Tutorial</title>
+<meta name="description" content="The git remote command is a command to add / modify / delete a remote repository. To be more precise, it is a command to add / change / delete a simple name that represents a remote repository expressed by a URL.">
   </head>
   <body>
     <div class="container">
@@ -52,31 +50,30 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> Git </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop="name">コマンド</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> command </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210810081052.html">git remote - リモートリポジトリの追加・変更・削除</a></h2>
+<h2><a href="/blog/20210810081052.html"> git remote --Add / Modify / Delete Remote Repository </a></h2>
 <p>
-  git remoteコマンドは、リモートリポジトリの追加・変更・削除を行うコマンドです。もうすこし、正確に書くと、URLで表現されるリモートリポジトリを表す簡単な名前を、追加・変更・削除するコマンドです。
+  The git remote command is a command to add / modify / delete a remote repository. To be more precise, it is a command to add / change / delete a simple name that represents a remote repository expressed by a URL.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -95,58 +92,58 @@
 
 
 <p>
-  以下の解説は、便宜的にリモートリポジトリの追加・変更・削除という言葉で書きますが、実際の内容は、URLで表現されるリモートリポジトリを表す簡単な名前を、追加・変更・削除しているということを意識してください。
+  The following explanation is written in terms of adding / changing / deleting the remote repository for convenience, but the actual content is adding / changing / deleting the simple name that represents the remote repository expressed in the URL. Please be aware of that.
 </p>
-<h3>リモートリポジトリの追加</h3>
+<h3> Add remote repository </h3>
 <p>
-  リモートリポジトリを追加するには「git remote add」コマンドを使用します。最初の引数は、リモートブランチの名前、第二引数は、リモートブランチのURLです。
+  Use the "git remote add" command to add a remote repository. The first argument is the name of the remote branch and the second argument is the URL of the remote branch.
 </p>
 <p>
-  デフォルトのリモートリポジトリの名前は、慣習で「origin」です。
+  The name of the default remote repository is customarily "origin".
 </p>
 <pre>
-# リモートリポジトリの追加
+#Add remote repository
 git remote add origin git@github.com:yuki-kimoto/perlzemigit.git
 </pre>
-<h3>リモートリポジトリの変更</h3>
+<h3> Modify remote repository </h3>
 <p>
-  リモートリポジトリ名が指しているURLを変更するには「git remote set-url」コマンドを使用します。
+  Use the "git remote set-url" command to change the URL that the remote repository name points to.
 </p>
 <pre>
 git remote set-url origin git@github.com:yuki-kimoto/ohter.git
 </pre>
-<h3>リモートリポジトリの削除</h3>
+<h3> Delete remote repository </h3>
 <p>
-  リモートリポジトリの削除するには「git remote remove」コマンドを使用します。
+  Use the "git remote remove" command to remove a remote repository.
 </p>
 <pre>
 git remote remove origin
 </pre>
-<h3>リモートリポジトリの一覧の表示</h3>
+<h3> Display list of remote repositories </h3>
 <p>
-  リモートリポジトリの一覧を表示するには「git remote」とします。
+  Use "git remote" to see a list of remote repositories.
 </p>
 <pre>
 git remote
 </pre>
 <p>
-  出力結果のサンプルです。
+  This is a sample output result.
 </p>
 <pre>
 origin
 </pre>
 <p>
-  リモートリポジトリが、どのURLを指しているかを知りたい場合は「git remote」の「-v」オプションを使用します。
+  If you want to know which URL the remote repository points to, use the "-v" option of "git remote".
 </p>
 <pre>
 git remote -v
 </pre>
 <p>
-  出力結果のサンプルです。
+  This is a sample output result.
 </p>
 <pre>
-origin  git@github.com:yuki-kimoto/perlzemigit.git (fetch)
-origin  git@github.com:yuki-kimoto/perlzemigit.git (push)
+origin git@github.com:yuki-kimoto/perlzemigit.git (fetch)
+origin git@github.com:yuki-kimoto/perlzemigit.git (push)
 </pre>
 
   </div>
@@ -174,8 +171,7 @@ origin  git@github.com:yuki-kimoto/perlzemigit.git (push)
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

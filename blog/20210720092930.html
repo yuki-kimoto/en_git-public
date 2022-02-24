@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-RZ64QNYV4Y');
 </script>
-<title>Gitリポジトリの初期化 - Git Tutorial</title>
-<meta name="description" content="Gitリポジトリを作成しましょう。Gitでリポジトリ管理を行うときに最初に必要な作業がリポジトリの初期化です。">
+<title> Initialize Git repository  - Git Tutorial</title>
+<meta name="description" content="Let's create a Git repository. The first task you need to do when managing a repository in Git is to initialize the repository.">
   </head>
   <body>
     <div class="container">
@@ -52,31 +50,30 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> Git </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/tutorial.html">
-        <span itemprop="name">入門</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Introduction </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210720092930.html">Gitリポジトリの初期化</a></h2>
+<h2><a href="/blog/20210720092930.html"> Initialize Git repository </a></h2>
 <p>
-  Gitリポジトリを作成しましょう。Gitでリポジトリ管理を行うときに最初に必要な作業がリポジトリの初期化です。
+  Let's create a Git repository. The first task you need to do when managing a repository in Git is to initialize the repository.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -95,50 +92,50 @@
 
 
 <p>
-  ソースコードがあるプロジェクトのディレクトリが「myapp」だったとしましょう。
+  Let's say the directory of the project where the source code is located is "myapp".
 </p>
 <pre>
-mypp/foo.pl
+mypp / foo.pl
     /bar.pl
     /baz.pl
 </pre>
 <p>
-  このディレクトリをGitリポジトリとして管理するには、「<a href="/blog/20201109142343.html">git init</a>」コマンドを使って初期化します。
+  To manage this directory as a Git repository, initialize it using the <a href="/blog/20201109142343.html"> git init</a> command.
 </p>
 <p>
-  <a href="https://en.linux.perlzemi.com/blog/20191012191854.html">cdコマンド</a>で「mypp」ディレクトリに移動します。
+  Change to the "mypp" directory with the <a href="https://en.linux.perlzemi.com/blog/20191012191854.html"> cd command</a>.
 </p>
 <pre>
 cd mypp
 </pre>
 <p>
-  次に「git init」コマンドを実行します。
+  Then run the "git init" command.
 </p>
 <pre>
-# Gitリポジトリの初期化
+#Initialize Git repository
 git init
 </pre>
 <p>
-  成功すると次のようなメッセージが出力されます。
+  If successful, the following message will be output.
 </p>
 <pre>
 Initialized empty Git repository in /home/kimoto/labo/myapp/.git/
 </pre>
 <p>
-  <a href="https://en.linux.perlzemi.com/blog/20191126082723.html">lsコマンド</a>で「-a」オプションを指定して、隠しディレクトリまで表示すると「.git」というディレクトリができています。
+  If you specify the "-a" option with the <a href="https://en.linux.perlzemi.com/blog/20191126082723.html"> ls command</a> and display the hidden directory, it will be ".git". There is a directory called.
 </p>
 <pre>
-$ ls -a
-.  ..  foo.txt  .git
+$ls -a
+... foo.txt .git
 </pre>
 <p>
-  「.git」ディレクトリの中には、このリポジトリに関するGitの設定や、Gitのコミット情報が保存されます。
+  The ".git" directory stores Git settings for this repository and Git commit information.
 </p>
 <p>
-  「.git」というディレクトリの中身は、特別な理由がない限りは、直接編集しないよう注意しましょう。
+  Be careful not to edit the contents of the ".git" directory directly unless you have a specific reason to do so.
 </p>
 <p>
-  これでGitリポジトリの初期化の作業が完了です。
+  This completes the work of initializing the Git repository.
 </p>
 
   </div>
@@ -166,8 +163,7 @@ $ ls -a
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

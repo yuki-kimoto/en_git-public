@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-RZ64QNYV4Y');
 </script>
-<title>git diff - 差分の表示 - Git Tutorial</title>
-<meta name="description" content="git diffコマンドは差分を表示するコマンドです。">
+<title> git diff --Display difference  - Git Tutorial</title>
+<meta name="description" content="The git diff command is a command to display the difference.">
   </head>
   <body>
     <div class="container">
@@ -52,31 +50,30 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> Git </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop="name">コマンド</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> command </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210805092910.html">git diff - 差分の表示</a></h2>
+<h2><a href="/blog/20210805092910.html"> git diff --Display difference </a></h2>
 <p>
-  git diffコマンドは差分を表示するコマンドです。
+  The git diff command is a command to display the difference.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -95,103 +92,103 @@
 
 
 <pre>
-# 差分の表示
+#Display difference
 git diff
 </pre>
 <p>
-  git diff コマンドの出力例です。
+  Here is an example of the output of the git diff command.
 </p>
 <pre>
-$ git diff
-diff --git a/README.md b/README.md
+$git diff
+diff --git a /README.md b / README.md
 deleted file mode 100644
 index 372dc9d3..00000000
---- a/README.md
-+++ /dev/null
-@@ -1,5 +0,0 @@
-diff --git a/README.md b/README.md
+--- a / README.md
++++ / dev / null
+@@-1,5 +0,0 @@
+diff --git a /README.md b / README.md
 deleted file mode 100644
 index 372dc9d3..00000000
---- a/README.md
-+++ /dev/null
-@@ -1,5 +0,0 @@
--&lt;h1&gt;
--  Perl入門ゼミ
+--- a / README.md
++++ / dev / null
+@@-1,5 +0,0 @@
+-&lt;H1&gt;
+--Introduction to Perl Seminar
 -&lt;/h1&gt;
--
--
-diff --git a/templates/index.html b/templates/index.html
+――――
+――――
+diff --git a / templates / index.html b / templates / index.html
 index 66c755ea..f0b95399 100644
---- a/templates/index.html
-+++ b/templates/index.html
-@@ -2,7 +2,7 @@
+--- a / templates / index.html
++++ b / templates / index.html
+@@-2,7 +2,7 @@
 
- &lt;b&gt;Perlテキスト処理&lt;/b&gt;と&lt;b&gt;正規表現&lt;/b&gt;の入門の入門講座です。Perlは&lt;b&gt;テキスト処理&lt;/b&gt;と&lt;b&gt;正規表現&lt;/b&gt;が得意なプログラミング言語で&lt;b&gt;Linuxサーバー管理&lt;/b&gt;、&lt;b&gt;Webシステム開発&lt;/b&gt;という分野で活躍。テキスト処理と正規表現の基礎としてPerlプ
-ログラミング言語を基本から解説。LinuxとWeb開発も学べます。Hello World!
+ An introductory course on &lt;b&gt; Perl text processing &lt;/b&gt; and &lt;b&gt; regular expressions &lt;/b&gt;. Perl is a programming language that excels at &lt;b&gt; text processing &lt;/b&gt; and &lt;b&gt; regular expressions &lt;/b&gt; in the fields of &lt;b&gt; Linux server management &lt;/b&gt; and &lt;b&gt; Web system development &lt;/b&gt;. Active in. Perl as the basis for text processing and regular expressions
+Explains the logging language from the basics. You can also learn Linux and web development. Hello World!
 
--Perlは、ほとんどのLinux/Unixにインストールされていて、後方互換性が高く安定して
-運用できることに定評があります。
-+Perlは、ほとんどのLinux/Unixにインストールされていて、後方互換性が高く安定して
-運用できることに定評があります。いいね。
+-Perl is installed on most Linux / Unix and is backwards compatible and stable
+It has a good reputation for being operational.
++ Perl is installed on most Linux / Unix and is backwards compatible and stable
+It has a good reputation for being operational. How nice.
 
- &lt;h4&gt;Perlプログラミング入門&lt;/h4&gt;
+ &lt;h4&gt; Introduction to Perl Programming &lt;/h4&gt;
 </pre>
 <p>
-  git diffコマンドは、引数がない場合は、ワーキングディレクトリと<a href="/blog/20210723090147.html">コミット準備状態</a>との差分を表示します。コミット準備状態は、コミット準備を行っていない場合は、直近のコミットです。
+  The git diff command, with no arguments, displays the difference between the working directory and <a href="/blog/20210723090147.html"> commit ready state</a>. The commit-ready state is the most recent commit if you have not prepared for commit.
 </p>
 <p>
-  つまり、コミット準備を行った後は「git diff」コマンドは、なんの差分も表示しないということに注意しましょう。
+  In other words, note that the "git diff" command doesn't show any diffs after you've prepared for a commit.
 </p>
-<h4>直近のコミットとコミット準備状態の差分を表示する</h4>
+<h4> Show the difference between the most recent commit and the commit ready state </h4>
 <p>
-  直近のコミットとコミット準備状態の差分を表示するには「--cached」オプションを使い「git diff --cached」とします。
+  To see the difference between the most recent commit and the commit ready state, use the "--cached" option and type "git diff --cached".
 </p>
 <pre>
-# 直近のコミットとコミット準備状態の差分を表示
+# Show the difference between the most recent commit and the commit ready state
 git diff --cached
 </pre>
 <p>
-  「git add .」でコミット準備状態にした後に、実際にどんな差分が新しいコミットに追加されるのかを知るには「--cached」オプションを使用する必要があることに注意しましょう。
+  Note that you need to use the "--cached" option to see what diffs are actually added to the new commit after you prepare it for commit with "git add.".
 </p>
-<h4>特定のコミット間の差分を表示する</h4>
+<h4> Show diffs between specific commits </h4>
 <p>
-  特定のコミット間の差分を表示するには、二つのコミットIDを引数に指定します。
+  To see the difference between a particular commit, specify two commit IDs as arguments.
 </p>
 <pre>
-git diff コミットID1 コミットID2
+git diff commit ID1 commit ID2
 </pre>
 <p>
-  コミットIDを調べるには<a href="/blog/20201103093112.html">git logコマンド</a>を使用します。
+  Use the <a href="/blog/20201103093112.html"> git log command</a> to find out the commit ID.
 </p>
 <p>
-  コミットIDを指定したサンプルです。
+  This is a sample that specifies the commit ID.
 </p>
 <pre>
 git diff 30ce650c40cd05632fc8a992a7bff9d79dbaaa08 016d2063f2ed90d14ba9cea1a7ef1c2f962a003b
 </pre>
-<h4>現在のコミットと一つ前のコミットとの差分を表示する</h4>
+<h4> Show the difference between the current commit and the previous commit </h4>
 <p>
-  現在のコミットと一つ前のコミットとの差分を表示してみましょう。HEADというブランチが現在のブランチの先頭を示し、「^」という記号が、一つ前を表示することを利用すると次のように書けます。
+  Let's display the difference between the current commit and the previous commit. The branch called HEAD indicates the beginning of the current branch, and the symbol "^" can be written as follows by using the display of the previous branch.
 </p>
 <pre>
-git diff HEAD^ HEAD
+git diff HEAD ^ HEAD
 </pre>
 <p>
-  さらに、省略して、以下のように書けます。
+  Furthermore, you can omit it and write as follows.
 </p>
 <pre>
-git diff HEAD^
+git diff HEAD ^
 </pre>
-<h4>特定のコミットとその直前のコミットの差分を表示する</h4>
+<h4> Show the difference between a specific commit and the previous commit </h4>
 <p>
-  特定のコミットとその直前のコミットの差分を表示するには以下のようにします。
+  To see the difference between a particular commit and the previous commit:
 </p>
 <pre>
-git diff 30ce650c40cd05632fc8a992a7bff9d79dbaaa08^ 30ce650c40cd05632fc8a992a7bff9d79dbaaa08
+git diff 30ce650c40cd05632fc8a992a7bff9d79dbaaa08 ^ 30ce650c40cd05632fc8a992a7bff9d79dbaaa08
 </pre>
-<h4>ブランチの差分を表示する</h4>
+<h4> Show branch diffs </h4>
 <p>
-  ブランチの差分を表示するには以下のようにしましょう。ブランチがコミットに別名をつけたものだということを、知っていれば理解できますね。
+  To see the branch diffs, do the following: If you know that a branch is an alias for commit, you know.
 </p>
 <pre>
 git diff main some_branch
@@ -222,8 +219,7 @@ git diff main some_branch
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

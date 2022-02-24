@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-RZ64QNYV4Y');
 </script>
-<title>git add - ファイルをコミット準備状態にする - Git Tutorial</title>
-<meta name="description" content="ファイルをコミット準備状態にするには「git add」コマンドを使用します。">
+<title> git add --put the file ready for commit  - Git Tutorial</title>
+<meta name="description" content="Use the "git add" command to put the file ready for commit.">
   </head>
   <body>
     <div class="container">
@@ -52,31 +50,30 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> Git </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop="name">コマンド</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> command </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20201112094521.html">git add - ファイルをコミット準備状態にする</a></h2>
+<h2><a href="/blog/20201112094521.html"> git add --put the file ready for commit </a></h2>
 <p>
-  ファイルをコミット準備状態にするには「git add」コマンドを使用します。
+  Use the "git add" command to put the file ready for commit.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -95,45 +92,45 @@
 
 
 <pre>
-# ひとつのファイルをコミット準備状態にする
-git add ファイル名
+# Put one file ready for commit
+git add filename
 
-# カレントディレクトリ以下のすべてのファイルをコミット準備状態にする
-git add .
+# Put all files under the current directory ready for commit
+git add.
 </pre>
-<h3>コミット準備とは</h3>
+<h3> What is commit preparation? </H3>
 <p>
-  Gitでは、コミットを行う前に、コミット準備を行う必要があります。「git add」コマンドは、ファイルをコミット準備状態にするためのコマンドです。キャッシュに乗せるや、ステージング状態にすると解説されていることもあるかと思いますが、このサイトでは、コミット準備という言葉を使っています。
+  In Git, you need to prepare for a commit before you can commit. The "git add" command is a command to put a file ready for commit. It may be explained that you put it in the cache or put it in a staging state, but this site uses the term commit preparation.
 </p>
-<h3>コミット準備状態を確認するには?</h3>
+<h3> How to check the commit preparation status? </H3>
 <p>
-  コミット準備状態を確認するには「<a href="/blog/20201110105057.html">git status</a>」コマンドを使用します。
+  Use the "<a href="/blog/20201110105057.html"> git status</a>" command to check the commit readiness.
 </p>
 <pre>
 git status
 </pre>
-<h3>コミット準備状態を解除するには?</h3>
+<h3> How to cancel the commit preparation status? </H3>
 <p>
-  間違ってファイルをコミット準備状態にした場合に、コミット準備状態を解除したい場合があると思います。
+  If you accidentally put a file in the ready-to-commit state, you may want to cancel the ready-to-commit state.
 </p>
-<h4>特定のファイルのコミット準備状態を解除</h4>
+<h4> Uncommit ready for a specific file </h4>
 <p>
-  特定のファイルのコミット準備状態を解除するには「git rm --cached」を使用します。
+  Use "git rm --cached" to uncommit a particular file.
 </p>
 <pre>
-# 特定のファイルのコミット準備状態を解除する
-git rm --cached ファイル名
+# Release the ready-to-commit state for a specific file
+git rm --cached filename
 </pre>
-<h4>すべてのファイルのコミット準備状態を解除</h4>
+<h4> Uncommit ready status for all files </h4>
 <p>
-  すべてのファイルのコミット準備状態を解除するには「git reset」コマンドを使用します。
+  Use the "git reset" command to uncommit all files.
 </p>
 <pre>
-# すべてのファイルのコミット準備状態を解除する
+# Uncommit ready for all files
 git reset
 </pre>
 <p>
-  間違っても、すべてのファイルのコミット準備状態を解除するという目的で「git reset --hard」を実行しないでくださいね。「git reset --hard」を実行すると、作業ディレクトリ内で行われた変更もすべて戻ってしまいます。
+  If you make a mistake, don't run "git reset --hard" to uncommit all files. Running "git reset --hard" will also bring back any changes made in the working directory.
 </p>
 
   </div>
@@ -161,8 +158,7 @@ git reset
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

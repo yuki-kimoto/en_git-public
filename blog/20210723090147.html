@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-RZ64QNYV4Y');
 </script>
-<title>コミットの準備を行う - Git Tutorial</title>
-<meta name="description" content="Gitでは、コミットを行う前に、コミットの準備を行います。コミットの準備を行うには「git add」コマンドを使用します。">
+<title> Prepare for commit  - Git Tutorial</title>
+<meta name="description" content="Git prepares for a commit before it commits. Use the " git add" command to prepare for commit.">
   </head>
   <body>
     <div class="container">
@@ -52,31 +50,30 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> Git </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/tutorial.html">
-        <span itemprop="name">入門</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Introduction </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210723090147.html">コミットの準備を行う</a></h2>
+<h2><a href="/blog/20210723090147.html"> Prepare for commit </a></h2>
 <p>
-  Gitでは、コミットを行う前に、コミットの準備を行います。コミットの準備を行うには「<a href="/blog/20201112094521.html">git add</a>」コマンドを使用します。
+  Git prepares for a commit before it commits. Use the "<a href="/blog/20201112094521.html"> git add</a>" command to prepare for commit.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -95,95 +92,95 @@
 
 
 <pre>
-# ひとつのファイルをコミット準備状態にする
-git add ファイル名
+# Put one file ready for commit
+git add filename
 </pre>
 <p>
-  カレントディレクトリ以下にある、すべてのファイルを、コミット準備状態にするには「git add .」とします。Git 2.0からは、削除されたファイルも、コミット準備状態にしてくれます。
+  Use "git add." To put all the files under the current directory in the commit ready state. Starting with Git 2.0, deleted files will also be ready for commit.
 </p>
 <pre>
-# カレントディレクトリ以下にあるファイルをコミット準備状態にする
-git add .
+# Put files under the current directory ready for commit
+git add.
 </pre>
-<h3>コミット準備状態を確認する</h3>
+<h3> Check the commit preparation status </h3>
 <p>
-  コミット準備状態を確認するには「<a href="/blog/20201110105057.html">git status</a>」コマンドを使用します。
+  Use the "<a href="/blog/20201110105057.html"> git status</a>" command to check the commit readiness.
 </p>
 <pre>
-# コミット準備状態を確認する
+# Check the commit preparation status
 git status
 </pre>
 <p>
-  コミット準備ができている場合の出力のサンプルです。「templates/index.html」は修正、「README.md」削除で、コミット準備状態になっています。
+  Here is a sample output when ready to commit. "Templates / index.html" has been modified and "README.md" has been deleted, and it is ready for commit.
 </p>
 <pre>
-$ git status
+$git status
 On branch master
-Your branch is up to date with 'origin/master'.
+Your branch is up to date with'origin / master'.
 
 Changes to be committed:
-  (use "git reset HEAD &lt;file&gt;..." to unstage)
+  (use "git reset HEAD &lt;file&gt; ..." to unstage)
 
-        deleted:    README.md
-        modified:   templates/index.html
+        deleted: README.md
+        modified: templates / index.html
 </pre>
-<h3>コミットされるファイルの差分を確認する</h3>
+<h3> Check the difference between files to be committed </h3>
 <p>
-  コミットする前には、実際にコミットされるファイルの差分を確認しましょう。実際にコミットされるファイルの差分を確認するには「<a href="/blog/20210805092910.html">git diff</a>」コマンドの「--cached」オプションを使用します。「--cached」オプションのない「git diff」は、ワーキングディレクトリと、コミット準備されたファイルの差分を表示するので、注意しましょう。
+  Before committing, let's check the difference between the files that are actually committed. Use the "--cached" option of the "<a href="/blog/20210805092910.html"> git diff</a>" command to see the differences between the files that are actually committed. Note that "git diff" without the "--cached" option will show the difference between the working directory and the commit-prepared files.
 </p>
 <pre>
-# コミットされるファイルの差分を確認する
+#Check the differences between the files to be committed
 git diff --cached
 </pre>
 <p>
-  出力例です。
+  This is an output example.
 </p>
 <pre>
-$ git diff --cached
-diff --git a/README.md b/README.md
+$git diff --cached
+diff --git a /README.md b / README.md
 deleted file mode 100644
 index 372dc9d3..00000000
---- a/README.md
-+++ /dev/null
-@@ -1,5 +0,0 @@
-diff --git a/README.md b/README.md
+--- a / README.md
++++ / dev / null
+@@-1,5 +0,0 @@
+diff --git a /README.md b / README.md
 deleted file mode 100644
 index 372dc9d3..00000000
---- a/README.md
-+++ /dev/null
-@@ -1,5 +0,0 @@
--&lt;h1&gt;
--  Perl入門ゼミ
+--- a / README.md
++++ / dev / null
+@@-1,5 +0,0 @@
+-&lt;H1&gt;
+--Introduction to Perl Seminar
 -&lt;/h1&gt;
--
--
-diff --git a/templates/index.html b/templates/index.html
+――――
+――――
+diff --git a / templates / index.html b / templates / index.html
 index 66c755ea..f0b95399 100644
---- a/templates/index.html
-+++ b/templates/index.html
-@@ -2,7 +2,7 @@
+--- a / templates / index.html
++++ b / templates / index.html
+@@-2,7 +2,7 @@
 
- &lt;b&gt;Perlテキスト処理&lt;/b&gt;と&lt;b&gt;正規表現&lt;/b&gt;の入門の入門講座です。Perlは&lt;b&gt;テキスト処理&lt;/b&gt;と&lt;b&gt;正規表現&lt;/b&gt;が得意なプログラミング言語で&lt;b&gt;Linuxサーバー管理&lt;/b&gt;、&lt;b&gt;Webシステム開発&lt;/b&gt;という分野で活躍。テキスト処理と正規表現の基礎としてPerlプ
-ログラミング言語を基本から解説。LinuxとWeb開発も学べます。Hello World!
+ An introductory course on &lt;b&gt; Perl text processing &lt;/b&gt; and &lt;b&gt; regular expressions &lt;/b&gt;. Perl is a programming language that excels at &lt;b&gt; text processing &lt;/b&gt; and &lt;b&gt; regular expressions &lt;/b&gt; in the fields of &lt;b&gt; Linux server management &lt;/b&gt; and &lt;b&gt; Web system development &lt;/b&gt;. Active in. Perl as the basis for text processing and regular expressions
+Explains the logging language from the basics. You can also learn Linux and web development. Hello World!
 
--Perlは、ほとんどのLinux/Unixにインストールされていて、後方互換性が高く安定して
-運用できることに定評があります。
-+Perlは、ほとんどのLinux/Unixにインストールされていて、後方互換性が高く安定して
-運用できることに定評があります。いいね。
+-Perl is installed on most Linux / Unix and is backwards compatible and stable
+It has a good reputation for being operational.
++ Perl is installed on most Linux / Unix and is backwards compatible and stable
+It has a good reputation for being operational. How nice.
 
- &lt;h3&gt;Perlプログラミング入門&lt;/h3&gt;
+ &lt;h3&gt; Introduction to Perl Programming &lt;/h3&gt;
 </pre>
  
-<h3>コミット準備をキャンセルする</h3>
+<h3> Cancel commit preparation </h3>
 <p>
-  コミット準備をキャンセルするには「<a href="/blog/20210806133244.html">git reset</a>」コマンドをを使用します。
+  Use the "<a href="/blog/20210806133244.html"> git reset</a>" command to cancel the commit preparation.
 </p>
 <pre>
-# コミット準備をキャンセルする
+# Cancel commit preparation
 git reset
 </pre>
 <p>
-  間違っても、決して、コミット準備をキャンセルするために「git reset」コマンドに「--hard」オプションをつけないでください。今まで書いた、ワーキングディレクトリの変更内容が、すべてキャンセルされ、涙が出てきます。テキストエディタ上に、変更内容が残っている場合は、急いで、上書きしましょう。
+  If you make a mistake, never add the "--hard" option to the "git reset" command to cancel the commit preparation. All the changes in the working directory I've written so far will be canceled and tears will come out. If there are any changes left on the text editor, hurry up and overwrite them.
 </p>
 
   </div>
@@ -211,8 +208,7 @@ git reset
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

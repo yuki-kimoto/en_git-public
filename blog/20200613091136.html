@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-RZ64QNYV4Y');
 </script>
-<title>Githubに公開鍵を登録する - Git Tutorial</title>
-<meta name="description" content="Githubに公開鍵を登録しましょう。公開鍵を登録するとSSHプロトコルで、Gitリポジトリのpush/pullを行うことができます。">
+<title> Register the public key on Github  - Git Tutorial</title>
+<meta name="description" content="Register your public key on Github. If you register the public key, you can push / pull the Git repository with SSH protocol.">
   </head>
   <body>
     <div class="container">
@@ -52,31 +50,30 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> Git </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/github.html">
-        <span itemprop="name">Githubとの連携</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> Cooperation with Github </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20200613091136.html">Githubに公開鍵を登録する</a></h2>
+<h2><a href="/blog/20200613091136.html"> Register the public key on Github </a></h2>
 <p>
-  Githubに公開鍵を登録しましょう。公開鍵を登録するとSSHプロトコルで、Gitリポジトリのpush/pullを行うことができます。
+  Register your public key on Github. If you register the public key, you can push / pull the Git repository with SSH protocol.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -95,117 +92,117 @@
 
 
 <p>
-  この記事は、<a href="https://en.linux.perlzemi.com/">Linux</a>上で秘密鍵を作成することを前提としています。
+  This article assumes that you are creating a private key on <a href="https://en.linux.perlzemi.com/"> Linux</a>.
 </p>
-<h3>公開鍵と秘密鍵の生成</h3>
+<h3> Public and private key generation </h3>
 <p>
-  まず、<a href="https://en.linux.perlzemi.com/blog/20200621103220.html">SSH</a>の秘密鍵を保存しておくディレクトリに移動します。「~/.ssh」ディレクトリがない場合は作成します。パーミッションは「700」にします。
+  First, change to the directory where you want to store the <a href="https://en.linux.perlzemi.com/blog/20200621103220.html"> SSH</a> private key. If the "~ / .ssh" directory does not exist, create it. The permission should be "700".
 </p>
 <pre>
-mkdir -p ~/.ssh
-chmod 700 ~/.ssh
-cd ~/.ssh
+mkdir -p ~ / .ssh
+chmod 700 ~ / .ssh
+cd ~ / .ssh
 </pre>
 <p>
-  公開鍵と秘密鍵のペアを生成するには、ssh-keygenコマンドを実行します。公開鍵は秘密鍵とセットになっていて、秘密鍵はローカルマシンに、公開鍵は、Github上に登録します。
+  To generate a public / private key pair, run the ssh-keygen command. The public key is a set with the private key, the private key is registered on the local machine, and the public key is registered on Github.
 </p>
 <pre>
 ssh-keygen -t rsa
 </pre>
 <p>
-  生成するファイル名を聞かれますので以下の名前で入力しましょう。
+  You will be asked for the name of the file to be generated, so enter the following name.
 </p>
 <pre>
 id_rsa_github
 </pre>
 <p>
-  「id_rsa_github」と「id_rsa_github.pub」というファイルが作成されます。「id_rsa_github」は秘密鍵、「id_rsa_github.pub」は公開鍵です。
+  The files "id_rsa_github" and "id_rsa_github.pub" will be created. "Id_rsa_github" is the private key and "id_rsa_github.pub" is the public key.
 </p>
 <p>
-  パスフレーズを入力してくださいと聞かれたときは、パスフレーズを設定しないので、Enterを押してください。再入力を求められるのでEnterを押してください。
+  When you are asked to enter your passphrase, do not set a passphrase, so press Enter. Press Enter as you will be prompted to re-enter.
 </p>
-<h4>秘密鍵のパーミッションは600である必要がある</h4>
+<h4> Private key permissions must be 600 </h4>
 <p>
-  秘密鍵のパーミッションは600である必要があります。ssh-keygenを使って作成した場合は、パーミッションは600に設定されますが、他のサーバーから秘密鍵の内容をコピーしてきた場合は、<a href="https://en.linux.perlzemi.com/blog/20200519082545.html">chmod</a>コマンドを使って、パーミッションを600にしましょう。
+  The private key permission must be 600. If created using ssh-keygen, the permissions will be set to 600, but if you have copied the contents of the private key from another server, <a href="https://en.linux.perlzemi. Use the com / blog / 20200519082545.html "> chmod</a> command to set the permissions to 600.
 </p>
 <pre>
 chmod 600 id_rsa_github
 </pre>
-<h3>GithubにSSH接続する場合に作成した秘密鍵を使う設定</h3>
+<h3> Settings to use the private key created when connecting to Github via SSH </h3>
 <p>
-  GithubにSSH接続する場合に作成した秘密鍵を使う設定をしておきましょう。「~/.ssh/config」に追記します。パーミッションも600にしておきましょう。
+  Let's set to use the private key created when connecting to Github by SSH. Add to "~ / .ssh / config". Let's also set the permission to 600.
 </p>
 <pre>
-echo '
+echo'
 Host github github.com
   HostName github.com
-  IdentityFile ~/.ssh/id_rsa_github
+  IdentityFile ~ / .ssh / id_rsa_github
   User git
-' | cat &gt;&gt; ~/.ssh/config
-chmod 600 ~/.ssh/config
+'| cat &gt;&gt; ~ / .ssh / config
+chmod 600 ~ / .ssh / config
 
 </pre>
-<h3>Github上に公開鍵を登録</h3>
+<h3> Register the public key on Github </h3>
 <p>
-  Github上に公開鍵を登録しましょう。右上のユーザーアイコンの「Settings」から移動します。
+  Register your public key on Github. Move from "Settings" of the user icon on the upper right.
 </p>
 <p>
-  <a href="https://github.com/join"><img src="/images/github/github_user_setting_button.png" style="width:100%"></a>
+  <a href="https://github.com/join"> <img src = "/ images / github / github_user_setting_button.png" style = "width: 100%"></a>
 </p>
 <p>
-  SSH and GPG keyをクリックします。
+  Click SSH and GPG key.
 </p>
 <p>
-  <a href="https://github.com/join"><img src="/images/github/github_user_setting_ssh_button.png" style="width:100%"></a>
+  <a href="https://github.com/join"> <img src = "/ images / github / github_user_setting_ssh_button.png" style = "width: 100%"></a>
 </p>
 <p>
-  New SSH keyをクリック。
+  Click New SSH key.
 </p>
 <p>
-  <a href="https://github.com/join"><img src="/images/github/github_user_setting_new_ssh_key_button.png" style="width:100%"></a>
+  <a href="https://github.com/join"> <img src = "/ images / github / github_user_setting_new_ssh_key_button.png" style = "width: 100%"></a>
 </p>
 <p>
-  TitleとKeyを入力。Titleは任意で大丈夫です。Keyは「id_rsa_github.pub」の内容です。
+  Enter the Title and Key. Title is optional and okay. Key is the content of "id_rsa_github.pub".
 </p>
 <p>
-  <a href="https://en.linux.perlzemi.com/blog/20200113083613.html">cat</a>コマンドで「id_rsa_github.pub」の中身を表示してみましょう。
+  Let's display the contents of "id_rsa_github.pub" with the <a href="https://en.linux.perlzemi.com/blog/20200113083613.html"> cat</a> command.
 </p>
 <pre>
 cat id_rsa_github.pub
 </pre>
 <p>
-  以下のように表示されます。
+  It will be displayed as follows.
 </p>
 <pre>
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCjSsucYA958wTIKUcPRXC2iZxb84FXkzm41/jzpfnUeBFsypS8xfTXpfDaSIYeMDyr9pIUfDuWWPykoofL4WZaJYDy5pQclFwby/KttDRAnm0XZQ2ZDUtnrUUdva55mxOcTJP0c1VWXpwrhBA+JSFLOGB8wxCV8UFh9XWXI4c5QKQ/Hyl8//nXT6suQf199VNf4Ru31rs+49FDW9FyvoX1GGEEBJCT2ROVD6qi1xY766PuhM/4OMQeIxZmZg8ysML307viqkKh/2mecwkdV1mxGQt8GbO3gvTOX5h9p7tGEwa3zSHhxudux1Kf6Pfcg4FwKuld8r77DKMXEszpRI11 myapp@myhost
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCjSsucYA958wTIKUcPRXC2iZxb84FXkzm41 / jzpfnUeBFsypS8xfTXpfDaSIYeMDyr9pIUfDuWWPykoofL4WZaJYDy5pQclFwby / KttDRAnm0XZQ2ZDUtnrUUdva55mxOcTJP0c1VWXpwrhBA + JSFLOGB8wxCV8UFh9XWXI4c5QKQ / Hyl8 // nXT6suQf199VNf4Ru31rs + 49FDW9FyvoX1GGEEBJCT2ROVD6qi1xY766PuhM / 4OMQeIxZmZg8ysML307viqkKh / 2mecwkdV1mxGQt8GbO3gvTOX5h9p7tGEwa3zSHhxudux1Kf6Pfcg4FwKuld8r77DKMXEszpRI11 myapp @myhost
 </pre>
 <p>
-  この値がを貼り付けましょう。
+  Let's paste this value.
 </p>
 <p>
-  <a href="https://github.com/join"><img src="/images/github/github_user_setting_input_ssh_key_button.png" style="width:100%"></a>
+  <a href="https://github.com/join"> <img src = "/ images / github / github_user_setting_input_ssh_key_button.png" style = "width: 100%"></a>
 </p>
 <p>
-  これで、登録が完了です。
+  Registration is now complete.
 </p>
-<h3>GithubへSSHで接続できることの確認</h3>
+<h3> Confirm that you can connect to Github by SSH </h3>
 <p>
-  GithubへSSHで接続できることの確認しましょう。
+  Make sure you can SSH to Github.
 </p>
 <pre>
 ssh -T git@github.com
 </pre>
 <p>
-  まだアクセスしたホストでない場合は、通信を許可するかきかれるので「yes」と入力してEnterを押しましょう。
+  If you haven't accessed the host yet, you'll be asked to allow communication, so type "yes" and press Enter.
 </p>
 <p>
-  以下のように表示されると成功です。
+  It is successful when the following is displayed.
 </p>
 <pre>
 Hi shinshina-kimoto! You've successfully authenticated, but GitHub does not provide shell access.
 </pre>
 <p>
-  これで、SSHで、push/pullができるようになります。
+  Now you can push / pull with SSH.
 </p>
 
   </div>
@@ -233,8 +230,7 @@ Hi shinshina-kimoto! You've successfully authenticated, but GitHub does not prov
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

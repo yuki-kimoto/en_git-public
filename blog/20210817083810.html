@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-RZ64QNYV4Y');
 </script>
-<title>git revert - 元に戻す変更内容でコミット - Git Tutorial</title>
-<meta name="description" content="「git revert」コマンドを使うと、指定したコミットを、元に戻す変更内容でコミットできます。">
+<title> git revert --commit with undo changes  - Git Tutorial</title>
+<meta name="description" content="You can use the "git revert" command to commit the specified commit with the undo changes.">
   </head>
   <body>
     <div class="container">
@@ -52,31 +50,30 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> Git </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop="name">コマンド</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> command </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210817083810.html">git revert - 元に戻す変更内容でコミット</a></h2>
+<h2><a href="/blog/20210817083810.html"> git revert --commit with undo changes </a></h2>
 <p>
-  「git revert」コマンドを使うと、指定したコミットを、元に戻す変更内容でコミットできます。
+  You can use the "git revert" command to commit the specified commit with the undo changes.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -95,30 +92,30 @@
 
 
 <pre>
-git revert コミットID
+git revert commit id
 </pre>
-<h3>git revertはいつ使うの?</h3>
+<h3> When do you use git revert? </h3>
 <p>
-  Gitはコミットの履歴を持っており、その履歴を維持したまま、過去の変更を元に戻したいという場合が、あります。
+  Git has a history of commits, and you may want to keep that history and undo past changes.
 </p>
 <p>
-  そのような場合に「git revert」コマンドを使って、過去の変更を元に戻す変更内容でコミットできます。
+  In such cases, you can use the "git revert" command to commit with changes that undo past changes.
 </p>
-<h3>git revertをさらに戻すことはできるの</h3>
+<h3> You can get more git revert back </h3>
 <p>
-  はい「git revert」したコミットIDを指定すると、リバートのリバートを行うことができます。
+  Yes You can revert the revert by specifying the "git revert" commit ID.
 </p>
-<h3>複数の連続した変更内容があった場合はどうするの?</h3>
+<h3> What to do if there are multiple consecutive changes? </H3>
 <p>
-  コミットIDを調べて、新しい方から古い方に向かって複数回「git revert」を実行します。手間がかかりますが、やる必要があるときは、やる必要があります。
+  Find out the commit ID and run "git revert" multiple times, from newest to oldest. It's a hassle, but when you need to do it, you have to do it.
 </p>
 <pre>
-git revert コミット3
-git revert コミット2
-git revert コミット1
+git revert commit 3
+git revert commit 2
+git revert commit 1
 </pre>
 <p>
-  間違いが発生しやすい手順なのでmasterブランチではやらずに、まずは「<a href="/blog/20201220091244.html">git branch</a>」コマンドでブランチを作成してやるのが安心でしょう。
+  It's a mistake-prone procedure, so it's safe to create a branch with the "<a href="/blog/20201220091244.html"> git branch</a>" command instead of doing it in the master branch.
 </p>
 
   </div>
@@ -146,8 +143,7 @@ git revert コミット1
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

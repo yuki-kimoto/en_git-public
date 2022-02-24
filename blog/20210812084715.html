@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-RZ64QNYV4Y');
 </script>
-<title>git push - ローカルリポジトリの内容をリモートリポジトリに転送 - Git Tutorial</title>
-<meta name="description" content="git pushコマンドを使うと、ローカルリポジトリの内容をリモートリポジトリに転送し、ブランチの先頭位置を更新できます。">
+<title> git push --transfer the contents of the local repository to the remote repository  - Git Tutorial</title>
+<meta name="description" content="You can use the git push command to transfer the contents of the local repository to the remote repository and update the beginning of the branch.">
   </head>
   <body>
     <div class="container">
@@ -52,31 +50,30 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> Git </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop="name">コマンド</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> command </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210812084715.html">git push - ローカルリポジトリの内容をリモートリポジトリに転送</a></h2>
+<h2><a href="/blog/20210812084715.html"> git push --transfer the contents of the local repository to the remote repository </a></h2>
 <p>
-  git pushコマンドを使うと、ローカルリポジトリの内容をリモートリポジトリに転送し、ブランチの先頭位置を更新できます。
+  You can use the git push command to transfer the contents of the local repository to the remote repository and update the beginning of the branch.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -95,30 +92,30 @@
 
 
 <pre>
-# ローカルリポジトリの内容をリモートリポジトリに転送し
-# リモートリポジトリのmainブランチの位置を更新
+# Transfer the contents of the local repository to the remote repository
+#Update the location of the main branch of the remote repository
 git push origin main
 </pre>
-<h3>タグをリモートリポジトリに追加するには</h3>
+<h3> To add a tag to a remote repository </h3>
 <p>
-  タグをリモートリポジトリに転送するには、ブランチ名の代わりに、タグ名を指定します。
+  To transfer the tag to a remote repository, specify the tag name instead of the branch name.
 </p>
 <pre>
-git push origin タグ名
+git push origin tag name
 </pre>
-<h3>すべてのタグをリモートリポジトリに追加する</h3>
+<h3> Add all tags to remote repository </h3>
 <p>
-  すべてのタグをリモートリポジトリに追加したい場合は「--tags」を引数に指定します。
+  If you want to add all tags to the remote repository, specify "--tags" as an argument.
 </p>
 <pre>
 git push origin --tags
 </pre>
-<h3>ブランチ名を明示的にしていするのが良いの?</h3>
+<h3> Is it better to make the branch name explicit? </H3>
 <p>
-  はい。ブランチ名を明示的に指定するのが良いです。引数を省略した場合はGit 2.0より前のバージョンでは、すべてのブランチの先頭位置を更新してしまうからです。
+  Yes. It's a good idea to explicitly specify the branch name. If you omit the argument, versions prior to Git 2.0 will update the beginning of every branch.
 </p>
 <p>
-  Git 2が、広くインストールされるようになるまでは、ブランチ名を明示的に指定しましょう。
+  Let's explicitly specify the branch name until Git 2 is widely installed.
 </p>
 
   </div>
@@ -146,8 +143,7 @@ git push origin --tags
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

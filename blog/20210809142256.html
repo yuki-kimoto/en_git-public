@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-RZ64QNYV4Y');
 </script>
-<title>git fetch - リモートリポジトリの情報取得 - Git Tutorial</title>
-<meta name="description" content="git fetchコマンドを使用するとリモートリポジトリの情報を取得することができます。感覚的には、リモートリポジトリを、ローカルリポジトリへ同期すると考えてください。">
+<title> git fetch --remote repository information fetch  - Git Tutorial</title>
+<meta name="description" content="You can use the git fetch command to fetch information about remote repositories. Think of it as synchronizing a remote repository to a local repository.">
   </head>
   <body>
     <div class="container">
@@ -52,31 +50,30 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> Git </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop="name">コマンド</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> command </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20210809142256.html">git fetch - リモートリポジトリの情報取得</a></h2>
+<h2><a href="/blog/20210809142256.html"> git fetch --remote repository information fetch </a></h2>
 <p>
-  git fetchコマンドを使用するとリモートリポジトリの情報を取得することができます。感覚的には、リモートリポジトリを、ローカルリポジトリへ同期すると考えてください。
+  You can use the git fetch command to fetch information about remote repositories. Think of it as synchronizing a remote repository to a local repository.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -95,66 +92,66 @@
 
 
 <pre>
-# リモートリポジトリの情報を取得
+#Get remote repository information
 git fetch
 </pre>
-<h3>git fetchを使うのはどのようなときですか?</h3>
+<h3> When do you use git fetch? </h3>
 <p>
-  「<a href="/blog/20210813082314.html">git pull</a>」コマンドを使うと「git fetch」を行うことに加えて、現在のブランチに指定したリモートリポジトリのブランチの変更内容をマージしてくれます。
+  Using the "<a href="/blog/20210813082314.html"> git pull</a>" command will do a "git fetch" as well as any changes to the remote repository branch specified for the current branch. It will merge.
 </p>
 <p>
-  ですので「git pull」よりも「git fetch」を使いたい場合は、現在のブランチにリモートブランチの変更内容をマージしたくない場合です。
+  So if you want to use "git fetch" rather than "git pull", you don't want to merge the changes in the remote branch into the current branch.
 </p>
 <p>
-  他の開発者が作ったリモートにあるブランチを元に、ローカルのブランチを作ったり、手動でリモートリポジトリのブランチをマージしたいときなどがあります。
+  For example, you may want to create a local branch based on a remote branch created by another developer, or manually merge a branch in a remote repository.
 </p>
 <p>
-  また、安全のために「git pull」をまったく使わずに「git fetch」とマージ作業を分けて行うという開発者の方もおられます。
+  Also, for security reasons, some developers do not use "git pull" at all and do the merge work separately from "git fetch".
 </p>
-<h3>git fetchで知っておいた方が良いことを教えてください</h3>
+<h3> Please tell me what you should know with git fetch </h3>
 <p>
-  タグは、同期されます。
-</p>
-<p>
-  リモートブランチとローカルブランチを区別してください。git fetchをすると、リモートブランチを、ローカルリポジトリの中に取り込みますが、リモートブランチとローカルブランチは異なるものです。
+  The tags will be synced.
 </p>
 <p>
-  リモートブランチは「origin/foo」のように先頭に「origin」がついています。
+  Distinguish between remote and local branches. When you do a git fetch, you fetch the remote branch into your local repository, but the remote branch and the local branch are different.
 </p>
 <p>
-  <a href="/blog/20201220091244.html">git branch</a>コマンドで、ローカルブランチ表示してみましょう。
+  Remote branches have "origin" at the beginning, like "origin / foo".
+</p>
+<p>
+  Let's display the local branch with the <a href="/blog/20201220091244.html"> git branch</a> command.
 </p>
 <pre>
-# ローカルブランチの表示
+#View local branch
 git branch
 </pre>
 <p>
-  ローカルブランチの出力結果の例です。
+  Here is an example of the output of a local branch.
 </p>
 <pre>
 main
 foo
-bar
+bar bar
 </pre>
 <p>
-  git branchコマンドの「-r」オプションで、リモートブランチを表示してみましょう。
+  Let's display the remote branch with the "-r" option of the git branch command.
 </p>
 <pre>
-# リモートブランチの表示
+#View remote branches
 git branch -r
 </pre>
 <p>
-  リモートブランチの出力結果の例です。
+  Here is an example of the output result of a remote branch.
 </p>
 <pre>
-origin/foo
-origin/baz
+origin / foo
+origin / baz
 </pre>
 <p>
-  ややこしいのは、リモートブランチとは、リモートリポジトリにあるブランチのことではなくって、ローカルリポジトリの中にある、リモートリポジトリにあるブランチのコミットを指し示すブランチだということです。
+  The tricky part is that a remote branch isn't a branch in a remote repository, but a branch in a local repository that points to a commit in a branch in a remote repository.
 </p>
 <p>
-  ややこしいですが「origin/foo」「origin/baz」は「git fetch」により、ローカルリポジトリに取り込まれたと、考えてください。
+  It's confusing, but think of "origin / foo" and "origin / baz" as being fetched into your local repository by "git fetch".
 </p>
 
   </div>
@@ -182,8 +179,7 @@ origin/baz
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-RZ64QNYV4Y');
 </script>
-<title>git status - コミット準備されているかを確認する - Git Tutorial</title>
-<meta name="description" content="コミット準備されているかを確認するには「git status」コマンドを使用します。">
+<title> git status --Check if commit is ready  - Git Tutorial</title>
+<meta name="description" content="Use the "git status" command to see if it's ready to commit.">
   </head>
   <body>
     <div class="container">
@@ -52,31 +50,30 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> Git </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop="name">コマンド</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> command </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20201110105057.html">git status - コミット準備されているかを確認する</a></h2>
+<h2><a href="/blog/20201110105057.html"> git status --Check if commit is ready </a></h2>
 <p>
-  コミット準備されているかを確認するには「git status」コマンドを使用します。
+  Use the "git status" command to see if it's ready to commit.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -95,67 +92,67 @@
 
 
 <pre>
-# コミット準備されているかを確認
+#Check if commit is ready
 git status
 </pre>
-<h4>コミット準備とは</h4>
+<h4> What is commit preparation? </H4>
 <p>
-  Gitでは、いきなりコミットするのではなく、コミット準備という作業をコミットの前に行います。コミットするファイルを確定する作業のようなものだと考えてください。コミットは<a href="/blog/20201113141302.html">git commit</a>を使ってできますが、その前にコミット準備をします。公式には、インデックス、またはステージングと呼ばれますが、ここでは、解説のわかりやすさのために、コミット準備という言葉を使います。
+  In Git, instead of committing suddenly, the task of preparing for commit is done before committing. Think of it as the task of deciding which files to commit. You can commit using <a href="/blog/20201113141302.html"> git commit</a>, but before that, prepare for the commit. Officially called indexing, or staging, we'll use the term commit preparation here for the sake of clarity.
 </p>
-<h4>コミット準備がされていない場合</h4>
+<h4> If not ready to commit </h4>
 <p>
-  コミット準備がされていない場合の「git status」コマンドの出力例です。
+  Here is an example of the output of the "git status" command when it is not ready for commit.
 </p>
 <pre>
-# On branch master
-# Changes not staged for commit:
-#   (use "git add &lt;file&gt;..." to update what will be committed)
-#   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+#On branch master
+#Changes not staged for commit:
+# (use "git add &lt;file&gt; ..." to update what will be committed)
+# (use "git checkout-&lt;file&gt; ..." to discard changes in working directory)
 #
-#       modified:   templates/blog/20201109142343.html
+#modified: templates / blog / 20201109142343.html
 #
-# Untracked files:
-#   (use "git add &lt;file&gt;..." to include in what will be committed)
+#Untracked files:
+# (use "git add &lt;file&gt; ..." to include in what will be committed)
 #
-#       a.txt
-#       templates/blog/20201110105057.html
-no changes added to commit (use "git add" and/or "git commit -a")
+# a.txt
+# templates / blog / 20201110105057.html
+no changes added to commit (use "git add" and / or "git commit -a")
 </pre>
 <p>
-  新規に作成したファイルは、まだトラックされていませんと表示されています。
+  The newly created file is shown as not yet tracked.
 </p>
 <p>
-  修正がされたファイルは、まだコミットのための準備(ステージング)がされていませんと表示されます。
+  The modified file will show that it has not yet been prepared (staging) for commit.
 </p>
-<h4>コミット準備がされた場合</h4>
+<h4> When ready to commit </h4>
 <p>
-  コミット準備をするには「<a href="/blog/20201112094521.html">git add</a>」コマンドを使用します。「git add」を実行した後の状態を見てみましょう。
+  Use the "<a href="/blog/20201112094521.html"> git add</a>" command to prepare for commit. Let's take a look at the state after executing "git add".
 </p>
 <pre>
-# コミット準備
-git add .
+#Preparing to commit
+git add.
 
-# コミット準備がされているか確認
+#Check if you are ready to commit
 git status
 </pre>
 <p>
-  「git status」の出力結果を見てみましょう。
+  Let's see the output result of "git status".
 </p>
 <pre>
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD &lt;file&gt;..." to unstage)
+#On branch master
+#Changes to be committed:
+# (use "git reset HEAD &lt;file&gt; ..." to unstage)
 #
-#       new file:   a.txt
-#       modified:   templates/blog/20201109142343.html
-#       new file:   templates/blog/20201110105057.html
+# new file: a.txt
+#modified: templates / blog / 20201109142343.html
+# new file: templates / blog / 20201110105057.html
 #
 </pre>
 <p>
-  変更のコミット準備ができましたと表示されます。
+  You will see that your changes are ready to be committed.
 </p>
 <p>
-  コミットするファイルの確認ができたら「git commit」コマンドで、コミットをしましょう。
+  After confirming the file to commit, use the "git commit" command to commit.
 </p>
 
   </div>
@@ -183,8 +180,7 @@ git status
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

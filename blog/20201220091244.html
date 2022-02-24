@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-RZ64QNYV4Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-RZ64QNYV4Y');
 </script>
-<title>git branch - ブランチの一覧表示・ブランチの作成 - Git Tutorial</title>
-<meta name="description" content="ブランチの一覧表示、ブランチの作成を行うには「git branch」コマンドを使用します。">
+<title> git branch --List branch / Create branch  - Git Tutorial</title>
+<meta name="description" content="Use the "git branch" command to list branches and create branches.">
   </head>
   <body>
     <div class="container">
@@ -52,31 +50,30 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
-      </a>
-      <meta itemprop="position" content="1" />
+        <span itemprop = "name"> Git </span>
+     </a>
+      <meta itemprop = "position" content = "1" />
     </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop="name">コマンド</span>
-      </a>
-      <meta itemprop="position" content="2" />
+        <span itemprop = "name"> command </span>
+     </a>
+      <meta itemprop = "position" content = "2" />
     </li>
     <li>
       here
     </li>
   </ul>
 </div>
-<h2><a href="/blog/20201220091244.html">git branch - ブランチの一覧表示・ブランチの作成</a></h2>
+<h2><a href="/blog/20201220091244.html"> git branch --List branch / Create branch </a></h2>
 <p>
-  ブランチの一覧表示、ブランチの作成を行うには「git branch」コマンドを使用します。
+  Use the "git branch" command to list branches and create branches.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -94,105 +91,105 @@
 </div>
 
 
-<h3>ブランチの一覧表示</h3>
+<h3> List branches </h3>
 <p>
-  ブランチを一覧表示するには「git branch」コマンドで、引数をなしにします。
+  To list the branches, use the "git branch" command with no arguments.
 </p>
 <pre>
-# ブランチの一覧表示
+#Branch list
 git branch
 </pre>
 <p>
-  ブランチの一覧が表示されます。現在のブランチ名には「*」マークがついています。
+  A list of branches is displayed. The current branch name is marked with an "*".
 </p>
 <pre>
 * blead
   fix_bug
   v2_release
 </pre>
-<h3>ブランチの作成</h3>
+<h3> Create a branch </h3>
 <p>
-  ブランチを作成するには「git branch」コマンドで、ブランチ名を指定します。
+  To create a branch, specify the branch name with the "git branch" command.
 </p>
 <pre>
-# ブランチの作成
-git branch ブランチ名
+#Create a branch
+git branch branch name
 </pre>
-<h3>ブランチ名</h3>
+<h3> Branch name </h3>
 <p>
-  ブランチ名には、開発作業がわかる簡潔な名前を付けることをお勧めしています。
+  We recommend that you give your branch a concise name that will help you understand your development work.
 </p>
 <p>
-  商品の変更機能を追加するための開発ブランチの場合の例。
+  An example for a development branch to add a product modification feature.
 </p>
 <pre>
 git branch goods_update
 </pre>
 <p>
-  ポイントは、他のブランチと区別ができることと、わかりやすいことです。
+  The point is that it can be distinguished from other branches and is easy to understand.
 </p>
 <p>
-  大きなプロジェクトの場合は、作業者名が入ったりなど、もう少し長くなるかもしれません。
+  For large projects, it may be a little longer, such as with the worker's name.
 </p>
-<h3>ブランチとは何ですか?</h3>
+<h3> What is a branch? </h3>
 <p>
-  ブランチとは、開発を分岐させることができる機能のことです。たとえば、「新しい機能を追加」「バグを修正」「バージョン2のための保守」などに利用されます。bleadは、ここではメインのブランチで「bread leading(ブレッドの先頭)」という意味だと考えてください。
+  A branch is a feature that allows you to branch your development. For example, it is used for "adding new features", "fixing bugs", "maintenance for version 2", and so on. Think of blead here as "bread leading" in the main branch.
 </p>
 <pre>
-o - o - o - o - o - o - o blead
-        |     |
-        |     - o - o fix_bug
+o --o --o --o --o --o --o blead
+        | |
+        | --o --o fix_bug
         |
-        - o - o - o - o v2
+        --o --o --o --o v2
 </pre>
 <p>
-  内部実装としては、Gitの場合のブランチとは、単にコミットの先頭への参照のことです。コミットを分岐させることがブランチの作成で、コミットが分岐して伸びていくその先頭がブランチです。
+  As an internal implementation, a branch in Git is simply a reference to the beginning of a commit. Branching a commit is the creation of a branch, and the beginning of the branch where the commit branches and extends is the branch.
 </p>
 <p>
-  Gitでは、ブランチは参照として作成されるので、ブランチ全体のコピーが発生するということはなく、高速にブランチの作成を行うことができます。
+  In Git, the branch is created as a reference, so you don't have to copy the entire branch and you can create the branch faster.
 </p>
 <p>
-  「git branch」を実行した直後は、こんな感じです。
+  Immediately after executing "git branch", it looks like this.
 </p>
 <pre>
-# git branch 直後
-o - o - o  &lt;- blead
-           &lt;- fix_bug
+Immediately after # git branch
+o --o --o &lt;-blead
+           &lt;-fix_bug
 </pre>
 <p>
-  ブランチがコピーされることはなく、伸びているoの先頭のコミットIDに、fix_bugという名前が付くだけです。これが、参照という意味です。<a href="https://perlzemi.com/blog/20180214151861.html">Perlのリファレンス</a>や<a href="https://en.c.perlzemi.com/">C言語</a>のポインタを理解していれば、比較的理解しやすいかと思います。
+  The branch is never copied, just the commit ID at the beginning of the extended o is named fix_bug. This means reference. <a href="https://perlzemi.com/blog/20180214151861.html"> Perl Reference</a> and <a href="https://en.c.perlzemi.com/"> C language < If you understand the pointer of / a>, it will be relatively easy to understand.
 </p>
 <p>
-  fix_bugブランチでコミットをひとつ進めてみましょう。次のようになります。
+  Let's proceed with one commit in the fix_bug branch. It will be as follows.
 </p>
 <pre>
-# fix_bugでコミットを進める
+Proceed with commit with # fix_bug
 
-o - o - o   &lt;- blead
+o --o --o &lt;-blead
         |
-        - o &lt;- fix_bug
+        --o &lt;-fix_bug
 </pre>
-<h3>他のコミットやブランチやタグを元にしてブランチを作成する</h3>
+<h3> Create a branch based on other commits, branches or tags </h3>
 <p>
-  他のコミットIDやブランチやタグを元にしてブランチを作成することもできます。ブランチはリモートブランチでもローカルブランチでもOKです。リモートブランチは単に、リモートリポジトリのブランチという意味です。
+  You can also create a branch based on other commit IDs, branches, or tags. The branch can be a remote branch or a local branch. A remote branch simply means a branch in a remote repository.
 </p>
 <pre>
-git branch ブランチ名 元にするブランチ名など
+git branch branch name, branch name, etc.
 </pre>
 <p>
-  他のコミットやブランチやタグを元にしてブランチを作成するサンプルです。
+  This is a sample to create a branch based on other commits, branches and tags.
 </p>
 <pre>
-# コミットを元にする
+# Based on the commit
 git branch new_branch 7e4fd9251ed97e69274121a13d27f75c96ae7c61
 
-# 他のブランチを元にする
+# Based on another branch
 git branch new_branch fix_bug
 
-# リモートブランチを元にする
-git branch new_branch origin/fix_bug
+#Based on a remote branch
+git branch new_branch origin / fix_bug
 
-# タグを元にする
+Based on the # tag
 git branch new_branch v2.1
 </pre>
 
@@ -221,8 +218,7 @@ git branch new_branch v2.1
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"
